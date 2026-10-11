@@ -1,0 +1,5 @@
+OpenCode 1.18.35
+Native opencode mcp list: malware-analysis-lab connected
+SDK: five tools, bounded live demo and static triage passed
+No hosted model call performed
+Burp Suite Community Edition 2025.10.6-43347 CLI version verified; GUI manual

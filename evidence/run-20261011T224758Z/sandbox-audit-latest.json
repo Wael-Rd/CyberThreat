@@ -1,0 +1,25 @@
+{
+  "checks": [
+    {
+      "service": "station",
+      "host_namespaces_absent": true,
+      "host_devices_absent": true,
+      "pids_limit": 128,
+      "cpu_limit": 0.75,
+      "mounts_allowlisted": true,
+      "masked_kernel_paths": 11
+    },
+    {
+      "service": "target",
+      "host_namespaces_absent": true,
+      "host_devices_absent": true,
+      "pids_limit": 64,
+      "cpu_limit": 0.5,
+      "mounts_allowlisted": true,
+      "masked_kernel_paths": 11
+    }
+  ],
+  "kernel": "6.18.33.2-microsoft-standard-WSL2",
+  "runc": "runc version 1.3.3+ds1",
+  "docker": "27.5.1+dfsg4"
+}

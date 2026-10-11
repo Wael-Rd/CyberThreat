@@ -1,0 +1,41 @@
+name: malware-analysis-lab
+services:
+  target:
+    build: ./target
+    mem_limit: 128m
+    cpus: 0.50
+    pids_limit: 64
+    read_only: true
+    tmpfs: [/tmp:size=16m]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    volumes: [./evidence:/evidence]
+    networks: [lab]
+    sysctls:
+      net.ipv6.conf.all.disable_ipv6: "1"
+    healthcheck:
+      test: [CMD, python3, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health')"]
+      interval: 3s
+      timeout: 2s
+      retries: 15
+  station:
+    build:
+      context: ./station
+      network: host
+    mem_limit: 384m
+    cpus: 0.75
+    pids_limit: 128
+    read_only: true
+    tmpfs: [/tmp:size=32m]
+    cap_drop: [ALL]
+    cap_add: [NET_RAW]
+    security_opt: [no-new-privileges:true]
+    volumes: [./evidence:/evidence, ./samples:/samples:ro]
+    networks: [lab]
+    sysctls:
+      net.ipv6.conf.all.disable_ipv6: "1"
+    depends_on:
+      target: {condition: service_healthy}
+networks:
+  lab:
+    internal: true

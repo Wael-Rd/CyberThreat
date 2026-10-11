@@ -1,0 +1,50 @@
+[
+    {
+        "Name": "malware-analysis-lab_lab",
+        "Id": "a63b6c1c72c0ab20e9eb48fb6f410c588da92bf7702e06e79712877cf95c9941",
+        "Created": "2026-10-11T19:03:40.132398728+02:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.31.0.0/24",
+                    "Gateway": "172.31.0.1"
+                }
+            ]
+        },
+        "Internal": true,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "72c1c6ca636ccb08ac688e85c0682639fdad411ab0ebbcd21ee1f0418b641514": {
+                "Name": "malware-analysis-lab-station-1",
+                "EndpointID": "6d43f7558177bdc410a6df3ca93fbc8006e4c90a62a058c6efd843e535c0eae3",
+                "MacAddress": "02:42:ac:1f:00:03",
+                "IPv4Address": "172.31.0.3/24",
+                "IPv6Address": ""
+            },
+            "c831c832b0ca1660ce70af129c5e3b139d4fddea4427673f09a064bfafe75943": {
+                "Name": "malware-analysis-lab-target-1",
+                "EndpointID": "90a78ef8830ba7c30adee207ab305cb34d985f748befbac774ce212fb6016927",
+                "MacAddress": "02:42:ac:1f:00:02",
+                "IPv4Address": "172.31.0.2/24",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.config-hash": "097197ac58d6453db56b6db0e788c7d48785f05c59889492940fe54f41c90109",
+            "com.docker.compose.network": "lab",
+            "com.docker.compose.project": "malware-analysis-lab",
+            "com.docker.compose.version": "2.32.4"
+        }
+    }
+]

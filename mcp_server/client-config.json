@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "malware-analysis-lab": {
+      "command": "bash",
+      "args": [
+        "/absolute/path/to/CyberThreat/scripts/mcp-stdio.sh"
+      ]
+    }
+  }
+}

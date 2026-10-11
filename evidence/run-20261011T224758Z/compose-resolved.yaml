@@ -1,0 +1,76 @@
+name: malware-analysis-lab
+services:
+  station:
+    build:
+      context: ${PROJECT_ROOT}/station
+      dockerfile: Dockerfile
+      network: host
+    cap_add:
+      - NET_RAW
+    cap_drop:
+      - ALL
+    cpus: 0.75
+    depends_on:
+      target:
+        condition: service_healthy
+        required: true
+    mem_limit: "402653184"
+    networks:
+      lab: null
+    pids_limit: 128
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    sysctls:
+      net.ipv6.conf.all.disable_ipv6: "1"
+    tmpfs:
+      - /tmp:size=32m
+    volumes:
+      - type: bind
+        source: ${PROJECT_ROOT}/evidence
+        target: /evidence
+        bind:
+          create_host_path: true
+      - type: bind
+        source: ${PROJECT_ROOT}/samples
+        target: /samples
+        read_only: true
+        bind:
+          create_host_path: true
+  target:
+    build:
+      context: ${PROJECT_ROOT}/target
+      dockerfile: Dockerfile
+    cap_drop:
+      - ALL
+    cpus: 0.5
+    healthcheck:
+      test:
+        - CMD
+        - python3
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health')
+      timeout: 2s
+      interval: 3s
+      retries: 15
+    mem_limit: "134217728"
+    networks:
+      lab: null
+    pids_limit: 64
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    sysctls:
+      net.ipv6.conf.all.disable_ipv6: "1"
+    tmpfs:
+      - /tmp:size=16m
+    volumes:
+      - type: bind
+        source: ${PROJECT_ROOT}/evidence
+        target: /evidence
+        bind:
+          create_host_path: true
+networks:
+  lab:
+    name: malware-analysis-lab_lab
+    internal: true

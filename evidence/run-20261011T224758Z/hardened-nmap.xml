@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Sun Oct 11 22:48:07 2026 as: nmap -sT -Pn -n -&#45;max-retries 1 -&#45;max-rate 30 -p 1-100,8080 -oX /evidence/run-20261011T224758Z/hardened-nmap.xml target -->
+<nmaprun scanner="nmap" args="nmap -sT -Pn -n -&#45;max-retries 1 -&#45;max-rate 30 -p 1-100,8080 -oX /evidence/run-20261011T224758Z/hardened-nmap.xml target" start="1791758887" startstr="Sun Oct 11 22:48:07 2026" version="7.93" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="101" services="1-100,8080"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1791758887" endtime="1791758890"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="172.31.0.2" addrtype="ipv4"/>
+<hostnames>
+<hostname name="target" type="user"/>
+</hostnames>
+<ports><extraports state="closed" count="100">
+<extrareasons reason="conn-refused" count="100" proto="tcp" ports="1-100"/>
+</extraports>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+</ports>
+<times srtt="176" rttvar="60" to="100000"/>
+</host>
+<runstats><finished time="1791758890" timestr="Sun Oct 11 22:48:10 2026" summary="Nmap done at Sun Oct 11 22:48:10 2026; 1 IP address (1 host up) scanned in 3.36 seconds" elapsed="3.36" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

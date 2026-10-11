@@ -1,0 +1,62 @@
+{
+  "container_probes": {
+    "target": {
+      "uid": 1000,
+      "no_new_privs": true,
+      "seccomp_filter": true,
+      "cap_effective": "0000000000000000",
+      "rootfs_write_denied": true,
+      "mount_namespace_denied": true,
+      "samples_write_denied": true,
+      "docker_socket_absent": true,
+      "ipv6_disabled": true
+    },
+    "station": {
+      "uid": 0,
+      "no_new_privs": true,
+      "seccomp_filter": true,
+      "cap_effective": "0000000000002000",
+      "rootfs_write_denied": true,
+      "mount_namespace_denied": true,
+      "samples_write_denied": true,
+      "docker_socket_absent": true,
+      "ipv6_disabled": true
+    },
+    "static_worker": {
+      "uid": 65534,
+      "no_new_privs": true,
+      "seccomp_filter": true,
+      "cap_effective": "0000000000000000",
+      "rootfs_write_denied": true,
+      "mount_namespace_denied": true,
+      "samples_write_denied": true,
+      "docker_socket_absent": true,
+      "ipv6_disabled": true,
+      "evidence_write_denied": true
+    }
+  },
+  "host_sentinel_denied": true,
+  "containers": [
+    {
+      "service": "station",
+      "memory_bytes": 402653184,
+      "cpu_nanocpus": 750000000,
+      "read_only": true,
+      "published_ports": false,
+      "cap_add": [
+        "NET_RAW"
+      ]
+    },
+    {
+      "service": "target",
+      "memory_bytes": 134217728,
+      "cpu_nanocpus": 500000000,
+      "read_only": true,
+      "published_ports": false,
+      "cap_add": null
+    }
+  ],
+  "host_external_connection": true,
+  "station_external_connection": false,
+  "egress_test": "denied with reachable host baseline"
+}

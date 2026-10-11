@@ -1,0 +1,355 @@
+22:48:07.232447 IP 172.31.0.3.38944 > 172.31.0.2.8080: Flags [S], seq 747968227, win 64240, options [mss 1460,sackOK,TS val 786637081 ecr 0,nop,wscale 10], length 0
+22:48:07.232485 IP 172.31.0.2.8080 > 172.31.0.3.38944: Flags [S.], seq 1144172997, ack 747968228, win 65160, options [mss 1460,sackOK,TS val 1742224835 ecr 786637081,nop,wscale 10], length 0
+22:48:07.232495 IP 172.31.0.3.38944 > 172.31.0.2.8080: Flags [.], ack 1, win 63, options [nop,nop,TS val 786637081 ecr 1742224835], length 0
+22:48:07.232572 IP 172.31.0.3.38944 > 172.31.0.2.8080: Flags [P.], seq 1:181, ack 1, win 63, options [nop,nop,TS val 786637081 ecr 1742224835], length 180: HTTP: GET / HTTP/1.1
+22:48:07.232583 IP 172.31.0.2.8080 > 172.31.0.3.38944: Flags [.], ack 181, win 64, options [nop,nop,TS val 1742224835 ecr 786637081], length 0
+22:48:07.233193 IP 172.31.0.2.8080 > 172.31.0.3.38944: Flags [P.], seq 1:146, ack 181, win 64, options [nop,nop,TS val 1742224836 ecr 786637081], length 145: HTTP: HTTP/1.0 200 OK
+22:48:07.233220 IP 172.31.0.3.38944 > 172.31.0.2.8080: Flags [.], ack 146, win 63, options [nop,nop,TS val 786637082 ecr 1742224836], length 0
+22:48:07.233301 IP 172.31.0.2.8080 > 172.31.0.3.38944: Flags [P.], seq 146:185, ack 181, win 64, options [nop,nop,TS val 1742224836 ecr 786637082], length 39: HTTP
+22:48:07.233307 IP 172.31.0.3.38944 > 172.31.0.2.8080: Flags [.], ack 185, win 63, options [nop,nop,TS val 786637082 ecr 1742224836], length 0
+22:48:07.233399 IP 172.31.0.3.38944 > 172.31.0.2.8080: Flags [F.], seq 181, ack 185, win 63, options [nop,nop,TS val 786637082 ecr 1742224836], length 0
+22:48:07.233505 IP 172.31.0.2.8080 > 172.31.0.3.38944: Flags [F.], seq 185, ack 182, win 64, options [nop,nop,TS val 1742224836 ecr 786637082], length 0
+22:48:07.233511 IP 172.31.0.3.38944 > 172.31.0.2.8080: Flags [.], ack 186, win 63, options [nop,nop,TS val 786637082 ecr 1742224836], length 0
+22:48:07.233987 IP 172.31.0.3.38954 > 172.31.0.2.8080: Flags [S], seq 865643641, win 64240, options [mss 1460,sackOK,TS val 2817585757 ecr 0,nop,wscale 10], length 0
+22:48:07.234057 IP 172.31.0.2.8080 > 172.31.0.3.38954: Flags [S.], seq 643980139, ack 865643642, win 65160, options [mss 1460,sackOK,TS val 2202273871 ecr 2817585757,nop,wscale 10], length 0
+22:48:07.234066 IP 172.31.0.3.38954 > 172.31.0.2.8080: Flags [.], ack 1, win 63, options [nop,nop,TS val 2817585757 ecr 2202273871], length 0
+22:48:07.234115 IP 172.31.0.3.38954 > 172.31.0.2.8080: Flags [P.], seq 1:199, ack 1, win 63, options [nop,nop,TS val 2817585757 ecr 2202273871], length 198: HTTP: GET /users?name=labuser HTTP/1.1
+22:48:07.234125 IP 172.31.0.2.8080 > 172.31.0.3.38954: Flags [.], ack 199, win 64, options [nop,nop,TS val 2202273871 ecr 2817585757], length 0
+22:48:07.234866 IP 172.31.0.2.8080 > 172.31.0.3.38954: Flags [P.], seq 1:146, ack 199, win 64, options [nop,nop,TS val 2202273872 ecr 2817585757], length 145: HTTP: HTTP/1.0 200 OK
+22:48:07.234914 IP 172.31.0.3.38954 > 172.31.0.2.8080: Flags [.], ack 146, win 63, options [nop,nop,TS val 2817585758 ecr 2202273872], length 0
+22:48:07.234951 IP 172.31.0.2.8080 > 172.31.0.3.38954: Flags [P.], seq 146:168, ack 199, win 64, options [nop,nop,TS val 2202273872 ecr 2817585758], length 22: HTTP
+22:48:07.234955 IP 172.31.0.3.38954 > 172.31.0.2.8080: Flags [.], ack 168, win 63, options [nop,nop,TS val 2817585758 ecr 2202273872], length 0
+22:48:07.235126 IP 172.31.0.3.38954 > 172.31.0.2.8080: Flags [F.], seq 199, ack 168, win 63, options [nop,nop,TS val 2817585758 ecr 2202273872], length 0
+22:48:07.235173 IP 172.31.0.2.8080 > 172.31.0.3.38954: Flags [F.], seq 168, ack 200, win 64, options [nop,nop,TS val 2202273872 ecr 2817585758], length 0
+22:48:07.235180 IP 172.31.0.3.38954 > 172.31.0.2.8080: Flags [.], ack 169, win 63, options [nop,nop,TS val 2817585758 ecr 2202273872], length 0
+22:48:07.265316 IP 172.31.0.3.48922 > 172.31.0.2.23: Flags [S], seq 1764588267, win 64240, options [mss 1460,sackOK,TS val 1675045820 ecr 0,nop,wscale 10], length 0
+22:48:07.265398 IP 172.31.0.2.23 > 172.31.0.3.48922: Flags [R.], seq 0, ack 1764588268, win 0, length 0
+22:48:07.298808 IP 172.31.0.3.38962 > 172.31.0.2.8080: Flags [S], seq 2721463601, win 64240, options [mss 1460,sackOK,TS val 1358161570 ecr 0,nop,wscale 10], length 0
+22:48:07.298857 IP 172.31.0.2.8080 > 172.31.0.3.38962: Flags [S.], seq 392875740, ack 2721463602, win 65160, options [mss 1460,sackOK,TS val 3804914952 ecr 1358161570,nop,wscale 10], length 0
+22:48:07.298872 IP 172.31.0.3.38962 > 172.31.0.2.8080: Flags [.], ack 1, win 63, options [nop,nop,TS val 1358161570 ecr 3804914952], length 0
+22:48:07.298949 IP 172.31.0.3.38962 > 172.31.0.2.8080: Flags [R.], seq 1, ack 1, win 63, options [nop,nop,TS val 1358161570 ecr 3804914952], length 0
+22:48:07.331997 IP 172.31.0.3.36136 > 172.31.0.2.22: Flags [S], seq 238213226, win 64240, options [mss 1460,sackOK,TS val 4042509210 ecr 0,nop,wscale 10], length 0
+22:48:07.332033 IP 172.31.0.2.22 > 172.31.0.3.36136: Flags [R.], seq 0, ack 238213227, win 0, length 0
+22:48:07.365410 IP 172.31.0.3.50194 > 172.31.0.2.80: Flags [S], seq 4270235659, win 64240, options [mss 1460,sackOK,TS val 2421893648 ecr 0,nop,wscale 10], length 0
+22:48:07.365454 IP 172.31.0.2.80 > 172.31.0.3.50194: Flags [R.], seq 0, ack 4270235660, win 0, length 0
+22:48:07.398662 IP 172.31.0.3.42062 > 172.31.0.2.21: Flags [S], seq 3883520688, win 64240, options [mss 1460,sackOK,TS val 1510915061 ecr 0,nop,wscale 10], length 0
+22:48:07.398700 IP 172.31.0.2.21 > 172.31.0.3.42062: Flags [R.], seq 0, ack 3883520689, win 0, length 0
+22:48:07.431986 IP 172.31.0.3.52786 > 172.31.0.2.53: Flags [S], seq 2854564817, win 64240, options [mss 1460,sackOK,TS val 3682050655 ecr 0,nop,wscale 10], length 0
+22:48:07.432028 IP 172.31.0.2.53 > 172.31.0.3.52786: Flags [R.], seq 0, ack 2854564818, win 0, length 0
+22:48:07.465413 IP 172.31.0.3.54052 > 172.31.0.2.25: Flags [S], seq 477019501, win 64240, options [mss 1460,sackOK,TS val 461345549 ecr 0,nop,wscale 10], length 0
+22:48:07.465450 IP 172.31.0.2.25 > 172.31.0.3.54052: Flags [R.], seq 0, ack 477019502, win 0, length 0
+22:48:07.498911 IP 172.31.0.3.54956 > 172.31.0.2.3: Flags [S], seq 1482147603, win 64240, options [mss 1460,sackOK,TS val 525167549 ecr 0,nop,wscale 10], length 0
+22:48:07.498949 IP 172.31.0.2.3 > 172.31.0.3.54956: Flags [R.], seq 0, ack 1482147604, win 0, length 0
+22:48:07.532022 IP 172.31.0.3.47388 > 172.31.0.2.52: Flags [S], seq 3936530022, win 64240, options [mss 1460,sackOK,TS val 1954667368 ecr 0,nop,wscale 10], length 0
+22:48:07.532059 IP 172.31.0.2.52 > 172.31.0.3.47388: Flags [R.], seq 0, ack 3936530023, win 0, length 0
+22:48:07.565408 IP 172.31.0.3.44976 > 172.31.0.2.91: Flags [S], seq 58770960, win 64240, options [mss 1460,sackOK,TS val 4184424399 ecr 0,nop,wscale 10], length 0
+22:48:07.565474 IP 172.31.0.2.91 > 172.31.0.3.44976: Flags [R.], seq 0, ack 58770961, win 0, length 0
+22:48:07.598980 IP 172.31.0.3.60924 > 172.31.0.2.70: Flags [S], seq 532799082, win 64240, options [mss 1460,sackOK,TS val 68581223 ecr 0,nop,wscale 10], length 0
+22:48:07.599017 IP 172.31.0.2.70 > 172.31.0.3.60924: Flags [R.], seq 0, ack 532799083, win 0, length 0
+22:48:07.631979 IP 172.31.0.3.38094 > 172.31.0.2.32: Flags [S], seq 1665660928, win 64240, options [mss 1460,sackOK,TS val 2782268009 ecr 0,nop,wscale 10], length 0
+22:48:07.632014 IP 172.31.0.2.32 > 172.31.0.3.38094: Flags [R.], seq 0, ack 1665660929, win 0, length 0
+22:48:07.665340 IP 172.31.0.3.57180 > 172.31.0.2.57: Flags [S], seq 4167423361, win 64240, options [mss 1460,sackOK,TS val 3335503915 ecr 0,nop,wscale 10], length 0
+22:48:07.665374 IP 172.31.0.2.57 > 172.31.0.3.57180: Flags [R.], seq 0, ack 4167423362, win 0, length 0
+22:48:07.698676 IP 172.31.0.3.52896 > 172.31.0.2.33: Flags [S], seq 3384853992, win 64240, options [mss 1460,sackOK,TS val 412424993 ecr 0,nop,wscale 10], length 0
+22:48:07.698731 IP 172.31.0.2.33 > 172.31.0.3.52896: Flags [R.], seq 0, ack 3384853993, win 0, length 0
+22:48:07.732153 IP 172.31.0.3.59874 > 172.31.0.2.69: Flags [S], seq 3842512604, win 64240, options [mss 1460,sackOK,TS val 2609825195 ecr 0,nop,wscale 10], length 0
+22:48:07.732253 IP 172.31.0.2.69 > 172.31.0.3.59874: Flags [R.], seq 0, ack 3842512605, win 0, length 0
+22:48:07.765417 IP 172.31.0.3.53236 > 172.31.0.2.79: Flags [S], seq 3274369936, win 64240, options [mss 1460,sackOK,TS val 2529004119 ecr 0,nop,wscale 10], length 0
+22:48:07.765459 IP 172.31.0.2.79 > 172.31.0.3.53236: Flags [R.], seq 0, ack 3274369937, win 0, length 0
+22:48:07.798744 IP 172.31.0.3.41308 > 172.31.0.2.19: Flags [S], seq 1734848875, win 64240, options [mss 1460,sackOK,TS val 1537473444 ecr 0,nop,wscale 10], length 0
+22:48:07.798781 IP 172.31.0.2.19 > 172.31.0.3.41308: Flags [R.], seq 0, ack 1734848876, win 0, length 0
+22:48:07.832172 IP 172.31.0.3.54016 > 172.31.0.2.66: Flags [S], seq 3464034530, win 64240, options [mss 1460,sackOK,TS val 4115259239 ecr 0,nop,wscale 10], length 0
+22:48:07.832207 IP 172.31.0.2.66 > 172.31.0.3.54016: Flags [R.], seq 0, ack 3464034531, win 0, length 0
+22:48:07.865322 IP 172.31.0.3.48996 > 172.31.0.2.13: Flags [S], seq 1604114663, win 64240, options [mss 1460,sackOK,TS val 10304545 ecr 0,nop,wscale 10], length 0
+22:48:07.865358 IP 172.31.0.2.13 > 172.31.0.3.48996: Flags [R.], seq 0, ack 1604114664, win 0, length 0
+22:48:07.898829 IP 172.31.0.3.52950 > 172.31.0.2.83: Flags [S], seq 1227099448, win 64240, options [mss 1460,sackOK,TS val 1495966105 ecr 0,nop,wscale 10], length 0
+22:48:07.898891 IP 172.31.0.2.83 > 172.31.0.3.52950: Flags [R.], seq 0, ack 1227099449, win 0, length 0
+22:48:07.931991 IP 172.31.0.3.56356 > 172.31.0.2.50: Flags [S], seq 637037623, win 64240, options [mss 1460,sackOK,TS val 2627906195 ecr 0,nop,wscale 10], length 0
+22:48:07.932026 IP 172.31.0.2.50 > 172.31.0.3.56356: Flags [R.], seq 0, ack 637037624, win 0, length 0
+22:48:07.965416 IP 172.31.0.3.36064 > 172.31.0.2.90: Flags [S], seq 1009066200, win 64240, options [mss 1460,sackOK,TS val 1880917907 ecr 0,nop,wscale 10], length 0
+22:48:07.965511 IP 172.31.0.2.90 > 172.31.0.3.36064: Flags [R.], seq 0, ack 1009066201, win 0, length 0
+22:48:07.998945 IP 172.31.0.3.48682 > 172.31.0.2.99: Flags [S], seq 927888730, win 64240, options [mss 1460,sackOK,TS val 3144188895 ecr 0,nop,wscale 10], length 0
+22:48:07.999010 IP 172.31.0.2.99 > 172.31.0.3.48682: Flags [R.], seq 0, ack 927888731, win 0, length 0
+22:48:08.032274 IP 172.31.0.3.47386 > 172.31.0.2.1: Flags [S], seq 1004470125, win 64240, options [mss 1460,sackOK,TS val 1048601808 ecr 0,nop,wscale 10], length 0
+22:48:08.032337 IP 172.31.0.2.1 > 172.31.0.3.47386: Flags [R.], seq 0, ack 1004470126, win 0, length 0
+22:48:08.065418 IP 172.31.0.3.41888 > 172.31.0.2.87: Flags [S], seq 4145363154, win 64240, options [mss 1460,sackOK,TS val 2257335411 ecr 0,nop,wscale 10], length 0
+22:48:08.065456 IP 172.31.0.2.87 > 172.31.0.3.41888: Flags [R.], seq 0, ack 4145363155, win 0, length 0
+22:48:08.098861 IP 172.31.0.3.52502 > 172.31.0.2.5: Flags [S], seq 2069429651, win 64240, options [mss 1460,sackOK,TS val 1443216916 ecr 0,nop,wscale 10], length 0
+22:48:08.098898 IP 172.31.0.2.5 > 172.31.0.3.52502: Flags [R.], seq 0, ack 2069429652, win 0, length 0
+22:48:08.132051 IP 172.31.0.3.40292 > 172.31.0.2.2: Flags [S], seq 2242376407, win 64240, options [mss 1460,sackOK,TS val 383892381 ecr 0,nop,wscale 10], length 0
+22:48:08.132088 IP 172.31.0.2.2 > 172.31.0.3.40292: Flags [R.], seq 0, ack 2242376408, win 0, length 0
+22:48:08.165336 IP 172.31.0.3.41760 > 172.31.0.2.38: Flags [S], seq 4125525405, win 64240, options [mss 1460,sackOK,TS val 3834811118 ecr 0,nop,wscale 10], length 0
+22:48:08.165374 IP 172.31.0.2.38 > 172.31.0.3.41760: Flags [R.], seq 0, ack 4125525406, win 0, length 0
+22:48:08.198782 IP 172.31.0.3.46584 > 172.31.0.2.74: Flags [S], seq 3818626804, win 64240, options [mss 1460,sackOK,TS val 1504264279 ecr 0,nop,wscale 10], length 0
+22:48:08.198818 IP 172.31.0.2.74 > 172.31.0.3.46584: Flags [R.], seq 0, ack 3818626805, win 0, length 0
+22:48:08.232011 IP 172.31.0.3.38910 > 172.31.0.2.15: Flags [S], seq 2690206386, win 64240, options [mss 1460,sackOK,TS val 3033000994 ecr 0,nop,wscale 10], length 0
+22:48:08.232048 IP 172.31.0.2.15 > 172.31.0.3.38910: Flags [R.], seq 0, ack 2690206387, win 0, length 0
+22:48:08.265483 IP 172.31.0.3.44476 > 172.31.0.2.78: Flags [S], seq 1365950236, win 64240, options [mss 1460,sackOK,TS val 3943340990 ecr 0,nop,wscale 10], length 0
+22:48:08.265577 IP 172.31.0.2.78 > 172.31.0.3.44476: Flags [R.], seq 0, ack 1365950237, win 0, length 0
+22:48:08.298691 IP 172.31.0.3.53476 > 172.31.0.2.6: Flags [S], seq 30615124, win 64240, options [mss 1460,sackOK,TS val 196572611 ecr 0,nop,wscale 10], length 0
+22:48:08.298727 IP 172.31.0.2.6 > 172.31.0.3.53476: Flags [R.], seq 0, ack 30615125, win 0, length 0
+22:48:08.332039 IP 172.31.0.3.50058 > 172.31.0.2.64: Flags [S], seq 617639328, win 64240, options [mss 1460,sackOK,TS val 1667765565 ecr 0,nop,wscale 10], length 0
+22:48:08.332075 IP 172.31.0.2.64 > 172.31.0.3.50058: Flags [R.], seq 0, ack 617639329, win 0, length 0
+22:48:08.365434 IP 172.31.0.3.47878 > 172.31.0.2.47: Flags [S], seq 3545544325, win 64240, options [mss 1460,sackOK,TS val 86063489 ecr 0,nop,wscale 10], length 0
+22:48:08.365469 IP 172.31.0.2.47 > 172.31.0.3.47878: Flags [R.], seq 0, ack 3545544326, win 0, length 0
+22:48:08.398738 IP 172.31.0.3.38744 > 172.31.0.2.8: Flags [S], seq 1902574280, win 64240, options [mss 1460,sackOK,TS val 3882176855 ecr 0,nop,wscale 10], length 0
+22:48:08.398773 IP 172.31.0.2.8 > 172.31.0.3.38744: Flags [R.], seq 0, ack 1902574281, win 0, length 0
+22:48:08.432041 IP 172.31.0.3.48366 > 172.31.0.2.71: Flags [S], seq 2059762064, win 64240, options [mss 1460,sackOK,TS val 1614570457 ecr 0,nop,wscale 10], length 0
+22:48:08.432078 IP 172.31.0.2.71 > 172.31.0.3.48366: Flags [R.], seq 0, ack 2059762065, win 0, length 0
+22:48:08.465453 IP 172.31.0.3.41952 > 172.31.0.2.58: Flags [S], seq 3953229649, win 64240, options [mss 1460,sackOK,TS val 3464042464 ecr 0,nop,wscale 10], length 0
+22:48:08.465544 IP 172.31.0.2.58 > 172.31.0.3.41952: Flags [R.], seq 0, ack 3953229650, win 0, length 0
+22:48:08.498672 IP 172.31.0.3.53168 > 172.31.0.2.75: Flags [S], seq 2915671597, win 64240, options [mss 1460,sackOK,TS val 1624659476 ecr 0,nop,wscale 10], length 0
+22:48:08.498764 IP 172.31.0.2.75 > 172.31.0.3.53168: Flags [R.], seq 0, ack 2915671598, win 0, length 0
+22:48:08.532145 IP 172.31.0.3.57636 > 172.31.0.2.85: Flags [S], seq 903496523, win 64240, options [mss 1460,sackOK,TS val 335026309 ecr 0,nop,wscale 10], length 0
+22:48:08.532238 IP 172.31.0.2.85 > 172.31.0.3.57636: Flags [R.], seq 0, ack 903496524, win 0, length 0
+22:48:08.565390 IP 172.31.0.3.38080 > 172.31.0.2.76: Flags [S], seq 2965727052, win 64240, options [mss 1460,sackOK,TS val 1911874165 ecr 0,nop,wscale 10], length 0
+22:48:08.565426 IP 172.31.0.2.76 > 172.31.0.3.38080: Flags [R.], seq 0, ack 2965727053, win 0, length 0
+22:48:08.598899 IP 172.31.0.3.39182 > 172.31.0.2.26: Flags [S], seq 2111552963, win 64240, options [mss 1460,sackOK,TS val 1278435160 ecr 0,nop,wscale 10], length 0
+22:48:08.598937 IP 172.31.0.2.26 > 172.31.0.3.39182: Flags [R.], seq 0, ack 2111552964, win 0, length 0
+22:48:08.631971 IP 172.31.0.3.34576 > 172.31.0.2.14: Flags [S], seq 518137654, win 64240, options [mss 1460,sackOK,TS val 1928768678 ecr 0,nop,wscale 10], length 0
+22:48:08.632055 IP 172.31.0.2.14 > 172.31.0.3.34576: Flags [R.], seq 0, ack 518137655, win 0, length 0
+22:48:08.665537 IP 172.31.0.3.59600 > 172.31.0.2.42: Flags [S], seq 2607766087, win 64240, options [mss 1460,sackOK,TS val 1367584250 ecr 0,nop,wscale 10], length 0
+22:48:08.665601 IP 172.31.0.2.42 > 172.31.0.3.59600: Flags [R.], seq 0, ack 2607766088, win 0, length 0
+22:48:08.701556 IP 172.31.0.3.33376 > 172.31.0.2.9: Flags [S], seq 3205270349, win 64240, options [mss 1460,sackOK,TS val 119949742 ecr 0,nop,wscale 10], length 0
+22:48:08.701624 IP 172.31.0.2.9 > 172.31.0.3.33376: Flags [R.], seq 0, ack 3205270350, win 0, length 0
+22:48:08.732043 IP 172.31.0.3.43002 > 172.31.0.2.81: Flags [S], seq 3711179395, win 64240, options [mss 1460,sackOK,TS val 1988478596 ecr 0,nop,wscale 10], length 0
+22:48:08.732078 IP 172.31.0.2.81 > 172.31.0.3.43002: Flags [R.], seq 0, ack 3711179396, win 0, length 0
+22:48:08.765371 IP 172.31.0.3.57150 > 172.31.0.2.65: Flags [S], seq 3198687264, win 64240, options [mss 1460,sackOK,TS val 629047697 ecr 0,nop,wscale 10], length 0
+22:48:08.765409 IP 172.31.0.2.65 > 172.31.0.3.57150: Flags [R.], seq 0, ack 3198687265, win 0, length 0
+22:48:08.798708 IP 172.31.0.3.40338 > 172.31.0.2.41: Flags [S], seq 2305886519, win 64240, options [mss 1460,sackOK,TS val 697405826 ecr 0,nop,wscale 10], length 0
+22:48:08.798761 IP 172.31.0.2.41 > 172.31.0.3.40338: Flags [R.], seq 0, ack 2305886520, win 0, length 0
+22:48:08.832023 IP 172.31.0.3.56314 > 172.31.0.2.35: Flags [S], seq 4046741020, win 64240, options [mss 1460,sackOK,TS val 4038518649 ecr 0,nop,wscale 10], length 0
+22:48:08.832063 IP 172.31.0.2.35 > 172.31.0.3.56314: Flags [R.], seq 0, ack 4046741021, win 0, length 0
+22:48:08.865378 IP 172.31.0.3.54320 > 172.31.0.2.56: Flags [S], seq 3897445747, win 64240, options [mss 1460,sackOK,TS val 1474283122 ecr 0,nop,wscale 10], length 0
+22:48:08.865412 IP 172.31.0.2.56 > 172.31.0.3.54320: Flags [R.], seq 0, ack 3897445748, win 0, length 0
+22:48:08.898760 IP 172.31.0.3.56976 > 172.31.0.2.86: Flags [S], seq 454951509, win 64240, options [mss 1460,sackOK,TS val 938132846 ecr 0,nop,wscale 10], length 0
+22:48:08.898866 IP 172.31.0.2.86 > 172.31.0.3.56976: Flags [R.], seq 0, ack 454951510, win 0, length 0
+22:48:08.932040 IP 172.31.0.3.56194 > 172.31.0.2.39: Flags [S], seq 2723835825, win 64240, options [mss 1460,sackOK,TS val 3227190453 ecr 0,nop,wscale 10], length 0
+22:48:08.932079 IP 172.31.0.2.39 > 172.31.0.3.56194: Flags [R.], seq 0, ack 2723835826, win 0, length 0
+22:48:08.965472 IP 172.31.0.3.49002 > 172.31.0.2.7: Flags [S], seq 2787689143, win 64240, options [mss 1460,sackOK,TS val 714903207 ecr 0,nop,wscale 10], length 0
+22:48:08.965509 IP 172.31.0.2.7 > 172.31.0.3.49002: Flags [R.], seq 0, ack 2787689144, win 0, length 0
+22:48:08.998917 IP 172.31.0.3.39216 > 172.31.0.2.30: Flags [S], seq 1409788367, win 64240, options [mss 1460,sackOK,TS val 1591069107 ecr 0,nop,wscale 10], length 0
+22:48:08.998953 IP 172.31.0.2.30 > 172.31.0.3.39216: Flags [R.], seq 0, ack 1409788368, win 0, length 0
+22:48:09.032224 IP 172.31.0.3.37296 > 172.31.0.2.12: Flags [S], seq 3894725480, win 64240, options [mss 1460,sackOK,TS val 3648738756 ecr 0,nop,wscale 10], length 0
+22:48:09.032263 IP 172.31.0.2.12 > 172.31.0.3.37296: Flags [R.], seq 0, ack 3894725481, win 0, length 0
+22:48:09.065412 IP 172.31.0.3.51678 > 172.31.0.2.37: Flags [S], seq 2341818184, win 64240, options [mss 1460,sackOK,TS val 3120477096 ecr 0,nop,wscale 10], length 0
+22:48:09.065489 IP 172.31.0.2.37 > 172.31.0.3.51678: Flags [R.], seq 0, ack 2341818185, win 0, length 0
+22:48:09.098723 IP 172.31.0.3.50128 > 172.31.0.2.60: Flags [S], seq 2538997860, win 64240, options [mss 1460,sackOK,TS val 393468098 ecr 0,nop,wscale 10], length 0
+22:48:09.098762 IP 172.31.0.2.60 > 172.31.0.3.50128: Flags [R.], seq 0, ack 2538997861, win 0, length 0
+22:48:09.132115 IP 172.31.0.3.50494 > 172.31.0.2.45: Flags [S], seq 1098823334, win 64240, options [mss 1460,sackOK,TS val 1591056334 ecr 0,nop,wscale 10], length 0
+22:48:09.132171 IP 172.31.0.2.45 > 172.31.0.3.50494: Flags [R.], seq 0, ack 1098823335, win 0, length 0
+22:48:09.165419 IP 172.31.0.3.59658 > 172.31.0.2.46: Flags [S], seq 1998351758, win 64240, options [mss 1460,sackOK,TS val 3074457781 ecr 0,nop,wscale 10], length 0
+22:48:09.165458 IP 172.31.0.2.46 > 172.31.0.3.59658: Flags [R.], seq 0, ack 1998351759, win 0, length 0
+22:48:09.198692 IP 172.31.0.3.44596 > 172.31.0.2.68: Flags [S], seq 1718841711, win 64240, options [mss 1460,sackOK,TS val 2705387471 ecr 0,nop,wscale 10], length 0
+22:48:09.198752 IP 172.31.0.2.68 > 172.31.0.3.44596: Flags [R.], seq 0, ack 1718841712, win 0, length 0
+22:48:09.232014 IP 172.31.0.3.50282 > 172.31.0.2.31: Flags [S], seq 3897902428, win 64240, options [mss 1460,sackOK,TS val 2135371612 ecr 0,nop,wscale 10], length 0
+22:48:09.232071 IP 172.31.0.2.31 > 172.31.0.3.50282: Flags [R.], seq 0, ack 3897902429, win 0, length 0
+22:48:09.265328 IP 172.31.0.3.38134 > 172.31.0.2.82: Flags [S], seq 1247885459, win 64240, options [mss 1460,sackOK,TS val 1970108087 ecr 0,nop,wscale 10], length 0
+22:48:09.265364 IP 172.31.0.2.82 > 172.31.0.3.38134: Flags [R.], seq 0, ack 1247885460, win 0, length 0
+22:48:09.298671 IP 172.31.0.3.59576 > 172.31.0.2.11: Flags [S], seq 4184090144, win 64240, options [mss 1460,sackOK,TS val 1719687023 ecr 0,nop,wscale 10], length 0
+22:48:09.298708 IP 172.31.0.2.11 > 172.31.0.3.59576: Flags [R.], seq 0, ack 4184090145, win 0, length 0
+22:48:09.332004 IP 172.31.0.3.48770 > 172.31.0.2.54: Flags [S], seq 2072357803, win 64240, options [mss 1460,sackOK,TS val 2392609138 ecr 0,nop,wscale 10], length 0
+22:48:09.332041 IP 172.31.0.2.54 > 172.31.0.3.48770: Flags [R.], seq 0, ack 2072357804, win 0, length 0
+22:48:09.365329 IP 172.31.0.3.39848 > 172.31.0.2.48: Flags [S], seq 1608850566, win 64240, options [mss 1460,sackOK,TS val 2158605205 ecr 0,nop,wscale 10], length 0
+22:48:09.365365 IP 172.31.0.2.48 > 172.31.0.3.39848: Flags [R.], seq 0, ack 1608850567, win 0, length 0
+22:48:09.398800 IP 172.31.0.3.60180 > 172.31.0.2.95: Flags [S], seq 1067124291, win 64240, options [mss 1460,sackOK,TS val 2551022018 ecr 0,nop,wscale 10], length 0
+22:48:09.398837 IP 172.31.0.2.95 > 172.31.0.3.60180: Flags [R.], seq 0, ack 1067124292, win 0, length 0
+22:48:09.432048 IP 172.31.0.3.36666 > 172.31.0.2.100: Flags [S], seq 2355101691, win 64240, options [mss 1460,sackOK,TS val 1913578830 ecr 0,nop,wscale 10], length 0
+22:48:09.432085 IP 172.31.0.2.100 > 172.31.0.3.36666: Flags [R.], seq 0, ack 2355101692, win 0, length 0
+22:48:09.465500 IP 172.31.0.3.38744 > 172.31.0.2.4: Flags [S], seq 1065421969, win 64240, options [mss 1460,sackOK,TS val 1828178884 ecr 0,nop,wscale 10], length 0
+22:48:09.465536 IP 172.31.0.2.4 > 172.31.0.3.38744: Flags [R.], seq 0, ack 1065421970, win 0, length 0
+22:48:09.498687 IP 172.31.0.3.50150 > 172.31.0.2.94: Flags [S], seq 1594962883, win 64240, options [mss 1460,sackOK,TS val 456359453 ecr 0,nop,wscale 10], length 0
+22:48:09.498723 IP 172.31.0.2.94 > 172.31.0.3.50150: Flags [R.], seq 0, ack 1594962884, win 0, length 0
+22:48:09.531941 IP 172.31.0.3.38058 > 172.31.0.2.97: Flags [S], seq 2320732116, win 64240, options [mss 1460,sackOK,TS val 776537161 ecr 0,nop,wscale 10], length 0
+22:48:09.532011 IP 172.31.0.2.97 > 172.31.0.3.38058: Flags [R.], seq 0, ack 2320732117, win 0, length 0
+22:48:09.565299 IP 172.31.0.3.56196 > 172.31.0.2.24: Flags [S], seq 2178020704, win 64240, options [mss 1460,sackOK,TS val 2527564977 ecr 0,nop,wscale 10], length 0
+22:48:09.565333 IP 172.31.0.2.24 > 172.31.0.3.56196: Flags [R.], seq 0, ack 2178020705, win 0, length 0
+22:48:09.598693 IP 172.31.0.3.59230 > 172.31.0.2.17: Flags [S], seq 3706126061, win 64240, options [mss 1460,sackOK,TS val 2997967216 ecr 0,nop,wscale 10], length 0
+22:48:09.598729 IP 172.31.0.2.17 > 172.31.0.3.59230: Flags [R.], seq 0, ack 3706126062, win 0, length 0
+22:48:09.632098 IP 172.31.0.3.55182 > 172.31.0.2.10: Flags [S], seq 199218924, win 64240, options [mss 1460,sackOK,TS val 2531605581 ecr 0,nop,wscale 10], length 0
+22:48:09.632156 IP 172.31.0.2.10 > 172.31.0.3.55182: Flags [R.], seq 0, ack 199218925, win 0, length 0
+22:48:09.665436 IP 172.31.0.3.52118 > 172.31.0.2.63: Flags [S], seq 1754060893, win 64240, options [mss 1460,sackOK,TS val 3931725366 ecr 0,nop,wscale 10], length 0
+22:48:09.665471 IP 172.31.0.2.63 > 172.31.0.3.52118: Flags [R.], seq 0, ack 1754060894, win 0, length 0
+22:48:09.698743 IP 172.31.0.3.47944 > 172.31.0.2.84: Flags [S], seq 1840491017, win 64240, options [mss 1460,sackOK,TS val 1458146839 ecr 0,nop,wscale 10], length 0
+22:48:09.698778 IP 172.31.0.2.84 > 172.31.0.3.47944: Flags [R.], seq 0, ack 1840491018, win 0, length 0
+22:48:09.732056 IP 172.31.0.3.35240 > 172.31.0.2.59: Flags [S], seq 2491740847, win 64240, options [mss 1460,sackOK,TS val 2027924886 ecr 0,nop,wscale 10], length 0
+22:48:09.732094 IP 172.31.0.2.59 > 172.31.0.3.35240: Flags [R.], seq 0, ack 2491740848, win 0, length 0
+22:48:09.765373 IP 172.31.0.3.52110 > 172.31.0.2.34: Flags [S], seq 461600780, win 64240, options [mss 1460,sackOK,TS val 533299983 ecr 0,nop,wscale 10], length 0
+22:48:09.765457 IP 172.31.0.2.34 > 172.31.0.3.52110: Flags [R.], seq 0, ack 461600781, win 0, length 0
+22:48:09.798753 IP 172.31.0.3.37378 > 172.31.0.2.77: Flags [S], seq 2843912066, win 64240, options [mss 1460,sackOK,TS val 2234753870 ecr 0,nop,wscale 10], length 0
+22:48:09.798816 IP 172.31.0.2.77 > 172.31.0.3.37378: Flags [R.], seq 0, ack 2843912067, win 0, length 0
+22:48:09.832062 IP 172.31.0.3.34598 > 172.31.0.2.27: Flags [S], seq 256187337, win 64240, options [mss 1460,sackOK,TS val 1159481330 ecr 0,nop,wscale 10], length 0
+22:48:09.832098 IP 172.31.0.2.27 > 172.31.0.3.34598: Flags [R.], seq 0, ack 256187338, win 0, length 0
+22:48:09.865331 IP 172.31.0.3.45522 > 172.31.0.2.61: Flags [S], seq 688612384, win 64240, options [mss 1460,sackOK,TS val 2689596821 ecr 0,nop,wscale 10], length 0
+22:48:09.865388 IP 172.31.0.2.61 > 172.31.0.3.45522: Flags [R.], seq 0, ack 688612385, win 0, length 0
+22:48:09.898619 IP 172.31.0.3.40392 > 172.31.0.2.72: Flags [S], seq 2894819150, win 64240, options [mss 1460,sackOK,TS val 1412998413 ecr 0,nop,wscale 10], length 0
+22:48:09.898654 IP 172.31.0.2.72 > 172.31.0.3.40392: Flags [R.], seq 0, ack 2894819151, win 0, length 0
+22:48:09.932062 IP 172.31.0.3.46258 > 172.31.0.2.67: Flags [S], seq 1495044040, win 64240, options [mss 1460,sackOK,TS val 1915590577 ecr 0,nop,wscale 10], length 0
+22:48:09.932099 IP 172.31.0.2.67 > 172.31.0.3.46258: Flags [R.], seq 0, ack 1495044041, win 0, length 0
+22:48:09.965440 IP 172.31.0.3.57354 > 172.31.0.2.29: Flags [S], seq 2434961774, win 64240, options [mss 1460,sackOK,TS val 264416569 ecr 0,nop,wscale 10], length 0
+22:48:09.965491 IP 172.31.0.2.29 > 172.31.0.3.57354: Flags [R.], seq 0, ack 2434961775, win 0, length 0
+22:48:09.998884 IP 172.31.0.3.56114 > 172.31.0.2.51: Flags [S], seq 1902197651, win 64240, options [mss 1460,sackOK,TS val 2010692851 ecr 0,nop,wscale 10], length 0
+22:48:09.998994 IP 172.31.0.2.51 > 172.31.0.3.56114: Flags [R.], seq 0, ack 1902197652, win 0, length 0
+22:48:10.032407 IP 172.31.0.3.33052 > 172.31.0.2.18: Flags [S], seq 2383768711, win 64240, options [mss 1460,sackOK,TS val 3131284952 ecr 0,nop,wscale 10], length 0
+22:48:10.032492 IP 172.31.0.2.18 > 172.31.0.3.33052: Flags [R.], seq 0, ack 2383768712, win 0, length 0
+22:48:10.065392 IP 172.31.0.3.34524 > 172.31.0.2.62: Flags [S], seq 213085687, win 64240, options [mss 1460,sackOK,TS val 3781240815 ecr 0,nop,wscale 10], length 0
+22:48:10.065429 IP 172.31.0.2.62 > 172.31.0.3.34524: Flags [R.], seq 0, ack 213085688, win 0, length 0
+22:48:10.098710 IP 172.31.0.3.33958 > 172.31.0.2.20: Flags [S], seq 1231953424, win 64240, options [mss 1460,sackOK,TS val 957333863 ecr 0,nop,wscale 10], length 0
+22:48:10.098897 IP 172.31.0.2.20 > 172.31.0.3.33958: Flags [R.], seq 0, ack 1231953425, win 0, length 0
+22:48:10.131983 IP 172.31.0.3.52820 > 172.31.0.2.73: Flags [S], seq 2649251291, win 64240, options [mss 1460,sackOK,TS val 277820126 ecr 0,nop,wscale 10], length 0
+22:48:10.132016 IP 172.31.0.2.73 > 172.31.0.3.52820: Flags [R.], seq 0, ack 2649251292, win 0, length 0
+22:48:10.165454 IP 172.31.0.3.51240 > 172.31.0.2.40: Flags [S], seq 3153851767, win 64240, options [mss 1460,sackOK,TS val 4175281850 ecr 0,nop,wscale 10], length 0
+22:48:10.165491 IP 172.31.0.2.40 > 172.31.0.3.51240: Flags [R.], seq 0, ack 3153851768, win 0, length 0
+22:48:10.198889 IP 172.31.0.3.49346 > 172.31.0.2.89: Flags [S], seq 1474569846, win 64240, options [mss 1460,sackOK,TS val 1294795972 ecr 0,nop,wscale 10], length 0
+22:48:10.198926 IP 172.31.0.2.89 > 172.31.0.3.49346: Flags [R.], seq 0, ack 1474569847, win 0, length 0
+22:48:10.232029 IP 172.31.0.3.41000 > 172.31.0.2.36: Flags [S], seq 3100566884, win 64240, options [mss 1460,sackOK,TS val 3694843197 ecr 0,nop,wscale 10], length 0
+22:48:10.232066 IP 172.31.0.2.36 > 172.31.0.3.41000: Flags [R.], seq 0, ack 3100566885, win 0, length 0
+22:48:10.265388 IP 172.31.0.3.57794 > 172.31.0.2.93: Flags [S], seq 93692554, win 64240, options [mss 1460,sackOK,TS val 3129753879 ecr 0,nop,wscale 10], length 0
+22:48:10.265426 IP 172.31.0.2.93 > 172.31.0.3.57794: Flags [R.], seq 0, ack 93692555, win 0, length 0
+22:48:10.298865 IP 172.31.0.3.40364 > 172.31.0.2.16: Flags [S], seq 445189858, win 64240, options [mss 1460,sackOK,TS val 1125872840 ecr 0,nop,wscale 10], length 0
+22:48:10.298901 IP 172.31.0.2.16 > 172.31.0.3.40364: Flags [R.], seq 0, ack 445189859, win 0, length 0
+22:48:10.331987 IP 172.31.0.3.40118 > 172.31.0.2.55: Flags [S], seq 1678325585, win 64240, options [mss 1460,sackOK,TS val 959005481 ecr 0,nop,wscale 10], length 0
+22:48:10.332023 IP 172.31.0.2.55 > 172.31.0.3.40118: Flags [R.], seq 0, ack 1678325586, win 0, length 0
+22:48:10.365429 IP 172.31.0.3.60676 > 172.31.0.2.49: Flags [S], seq 1903732815, win 64240, options [mss 1460,sackOK,TS val 2180261910 ecr 0,nop,wscale 10], length 0
+22:48:10.365487 IP 172.31.0.2.49 > 172.31.0.3.60676: Flags [R.], seq 0, ack 1903732816, win 0, length 0
+22:48:10.398683 IP 172.31.0.3.40104 > 172.31.0.2.43: Flags [S], seq 158949692, win 64240, options [mss 1460,sackOK,TS val 585311698 ecr 0,nop,wscale 10], length 0
+22:48:10.398723 IP 172.31.0.2.43 > 172.31.0.3.40104: Flags [R.], seq 0, ack 158949693, win 0, length 0
+22:48:10.432044 IP 172.31.0.3.56978 > 172.31.0.2.96: Flags [S], seq 2448479231, win 64240, options [mss 1460,sackOK,TS val 148106673 ecr 0,nop,wscale 10], length 0
+22:48:10.432103 IP 172.31.0.2.96 > 172.31.0.3.56978: Flags [R.], seq 0, ack 2448479232, win 0, length 0
+22:48:10.465357 IP 172.31.0.3.57112 > 172.31.0.2.88: Flags [S], seq 370189599, win 64240, options [mss 1460,sackOK,TS val 3366135486 ecr 0,nop,wscale 10], length 0
+22:48:10.465392 IP 172.31.0.2.88 > 172.31.0.3.57112: Flags [R.], seq 0, ack 370189600, win 0, length 0
+22:48:10.498762 IP 172.31.0.3.33790 > 172.31.0.2.44: Flags [S], seq 3399294149, win 64240, options [mss 1460,sackOK,TS val 2173314121 ecr 0,nop,wscale 10], length 0
+22:48:10.498828 IP 172.31.0.2.44 > 172.31.0.3.33790: Flags [R.], seq 0, ack 3399294150, win 0, length 0
+22:48:10.532418 IP 172.31.0.3.47622 > 172.31.0.2.98: Flags [S], seq 3629429174, win 64240, options [mss 1460,sackOK,TS val 3897000821 ecr 0,nop,wscale 10], length 0
+22:48:10.532514 IP 172.31.0.2.98 > 172.31.0.3.47622: Flags [R.], seq 0, ack 3629429175, win 0, length 0
+22:48:10.565278 IP 172.31.0.3.48110 > 172.31.0.2.92: Flags [S], seq 268211377, win 64240, options [mss 1460,sackOK,TS val 1154015106 ecr 0,nop,wscale 10], length 0
+22:48:10.565314 IP 172.31.0.2.92 > 172.31.0.3.48110: Flags [R.], seq 0, ack 268211378, win 0, length 0
+22:48:10.598708 IP 172.31.0.3.58722 > 172.31.0.2.28: Flags [S], seq 714332716, win 64240, options [mss 1460,sackOK,TS val 1677509163 ecr 0,nop,wscale 10], length 0
+22:48:10.598746 IP 172.31.0.2.28 > 172.31.0.3.58722: Flags [R.], seq 0, ack 714332717, win 0, length 0
+22:48:10.605157 IP 172.31.0.3.49712 > 172.31.0.2.8080: Flags [S], seq 3352520461, win 64240, options [mss 1460,sackOK,TS val 2535949562 ecr 0,nop,wscale 10], length 0
+22:48:10.605189 IP 172.31.0.2.8080 > 172.31.0.3.49712: Flags [S.], seq 1520032290, ack 3352520462, win 65160, options [mss 1460,sackOK,TS val 3920692864 ecr 2535949562,nop,wscale 10], length 0
+22:48:10.605198 IP 172.31.0.3.49712 > 172.31.0.2.8080: Flags [.], ack 1, win 63, options [nop,nop,TS val 2535949562 ecr 3920692864], length 0
+22:48:10.605254 IP 172.31.0.3.49712 > 172.31.0.2.8080: Flags [P.], seq 1:39, ack 1, win 63, options [nop,nop,TS val 2535949562 ecr 3920692864], length 38: HTTP: GET /health HTTP/1.0
+22:48:10.605265 IP 172.31.0.2.8080 > 172.31.0.3.49712: Flags [.], ack 39, win 64, options [nop,nop,TS val 3920692864 ecr 2535949562], length 0
+22:48:10.605905 IP 172.31.0.2.8080 > 172.31.0.3.49712: Flags [P.], seq 1:146, ack 39, win 64, options [nop,nop,TS val 3920692865 ecr 2535949562], length 145: HTTP: HTTP/1.0 200 OK
+22:48:10.605931 IP 172.31.0.3.49712 > 172.31.0.2.8080: Flags [.], ack 146, win 63, options [nop,nop,TS val 2535949563 ecr 3920692865], length 0
+22:48:10.606030 IP 172.31.0.2.8080 > 172.31.0.3.49712: Flags [P.], seq 146:178, ack 39, win 64, options [nop,nop,TS val 3920692865 ecr 2535949563], length 32: HTTP
+22:48:10.606056 IP 172.31.0.3.49712 > 172.31.0.2.8080: Flags [.], ack 178, win 63, options [nop,nop,TS val 2535949563 ecr 3920692865], length 0
+22:48:10.606248 IP 172.31.0.2.8080 > 172.31.0.3.49712: Flags [F.], seq 178, ack 39, win 64, options [nop,nop,TS val 3920692865 ecr 2535949563], length 0
+22:48:10.606331 IP 172.31.0.3.49712 > 172.31.0.2.8080: Flags [F.], seq 39, ack 179, win 63, options [nop,nop,TS val 2535949563 ecr 3920692865], length 0
+22:48:10.606354 IP 172.31.0.2.8080 > 172.31.0.3.49712: Flags [.], ack 40, win 64, options [nop,nop,TS val 3920692865 ecr 2535949563], length 0
+22:48:10.607559 IP 172.31.0.3.49724 > 172.31.0.2.8080: Flags [S], seq 4231040002, win 64240, options [mss 1460,sackOK,TS val 304612522 ecr 0,nop,wscale 10], length 0
+22:48:10.607608 IP 172.31.0.2.8080 > 172.31.0.3.49724: Flags [S.], seq 4268905737, ack 4231040003, win 65160, options [mss 1460,sackOK,TS val 1298406662 ecr 304612522,nop,wscale 10], length 0
+22:48:10.607616 IP 172.31.0.3.49724 > 172.31.0.2.8080: Flags [.], ack 1, win 63, options [nop,nop,TS val 304612522 ecr 1298406662], length 0
+22:48:10.607663 IP 172.31.0.3.49724 > 172.31.0.2.8080: Flags [P.], seq 1:207, ack 1, win 63, options [nop,nop,TS val 304612522 ecr 1298406662], length 206: HTTP: POST /login HTTP/1.1
+22:48:10.607673 IP 172.31.0.2.8080 > 172.31.0.3.49724: Flags [.], ack 207, win 64, options [nop,nop,TS val 1298406662 ecr 304612522], length 0
+22:48:10.607687 IP 172.31.0.3.49724 > 172.31.0.2.8080: Flags [P.], seq 207:253, ack 1, win 63, options [nop,nop,TS val 304612522 ecr 1298406662], length 46: HTTP
+22:48:10.607695 IP 172.31.0.2.8080 > 172.31.0.3.49724: Flags [.], ack 253, win 64, options [nop,nop,TS val 1298406662 ecr 304612522], length 0
+22:48:10.608194 IP 172.31.0.2.8080 > 172.31.0.3.49724: Flags [P.], seq 1:156, ack 253, win 64, options [nop,nop,TS val 1298406663 ecr 304612522], length 155: HTTP: HTTP/1.0 401 Unauthorized
+22:48:10.608221 IP 172.31.0.3.49724 > 172.31.0.2.8080: Flags [.], ack 156, win 63, options [nop,nop,TS val 304612523 ecr 1298406663], length 0
+22:48:10.608256 IP 172.31.0.2.8080 > 172.31.0.3.49724: Flags [P.], seq 156:180, ack 253, win 64, options [nop,nop,TS val 1298406663 ecr 304612523], length 24: HTTP
+22:48:10.608259 IP 172.31.0.3.49724 > 172.31.0.2.8080: Flags [.], ack 180, win 63, options [nop,nop,TS val 304612523 ecr 1298406663], length 0
+22:48:10.608415 IP 172.31.0.3.49724 > 172.31.0.2.8080: Flags [F.], seq 253, ack 180, win 63, options [nop,nop,TS val 304612523 ecr 1298406663], length 0
+22:48:10.608418 IP 172.31.0.2.8080 > 172.31.0.3.49724: Flags [F.], seq 180, ack 253, win 64, options [nop,nop,TS val 1298406663 ecr 304612523], length 0
+22:48:10.608430 IP 172.31.0.2.8080 > 172.31.0.3.49724: Flags [.], ack 254, win 64, options [nop,nop,TS val 1298406663 ecr 304612523], length 0
+22:48:10.608434 IP 172.31.0.3.49724 > 172.31.0.2.8080: Flags [.], ack 181, win 63, options [nop,nop,TS val 304612523 ecr 1298406663], length 0
+22:48:10.608982 IP 172.31.0.3.49736 > 172.31.0.2.8080: Flags [S], seq 3582676630, win 64240, options [mss 1460,sackOK,TS val 1884418224 ecr 0,nop,wscale 10], length 0
+22:48:10.609003 IP 172.31.0.2.8080 > 172.31.0.3.49736: Flags [S.], seq 1977632120, ack 3582676631, win 65160, options [mss 1460,sackOK,TS val 3303536675 ecr 1884418224,nop,wscale 10], length 0
+22:48:10.609010 IP 172.31.0.3.49736 > 172.31.0.2.8080: Flags [.], ack 1, win 63, options [nop,nop,TS val 1884418224 ecr 3303536675], length 0
+22:48:10.609059 IP 172.31.0.3.49736 > 172.31.0.2.8080: Flags [P.], seq 1:207, ack 1, win 63, options [nop,nop,TS val 1884418224 ecr 3303536675], length 206: HTTP: POST /login HTTP/1.1
+22:48:10.609070 IP 172.31.0.2.8080 > 172.31.0.3.49736: Flags [.], ack 207, win 64, options [nop,nop,TS val 3303536675 ecr 1884418224], length 0
+22:48:10.609083 IP 172.31.0.3.49736 > 172.31.0.2.8080: Flags [P.], seq 207:253, ack 1, win 63, options [nop,nop,TS val 1884418224 ecr 3303536675], length 46: HTTP
+22:48:10.609091 IP 172.31.0.2.8080 > 172.31.0.3.49736: Flags [.], ack 253, win 64, options [nop,nop,TS val 3303536675 ecr 1884418224], length 0
+22:48:10.609524 IP 172.31.0.2.8080 > 172.31.0.3.49736: Flags [P.], seq 1:156, ack 253, win 64, options [nop,nop,TS val 3303536675 ecr 1884418224], length 155: HTTP: HTTP/1.0 401 Unauthorized
+22:48:10.609551 IP 172.31.0.3.49736 > 172.31.0.2.8080: Flags [.], ack 156, win 63, options [nop,nop,TS val 1884418224 ecr 3303536675], length 0
+22:48:10.609573 IP 172.31.0.2.8080 > 172.31.0.3.49736: Flags [P.], seq 156:180, ack 253, win 64, options [nop,nop,TS val 3303536675 ecr 1884418224], length 24: HTTP
+22:48:10.609576 IP 172.31.0.3.49736 > 172.31.0.2.8080: Flags [.], ack 180, win 63, options [nop,nop,TS val 1884418224 ecr 3303536675], length 0
+22:48:10.609720 IP 172.31.0.2.8080 > 172.31.0.3.49736: Flags [F.], seq 180, ack 253, win 64, options [nop,nop,TS val 3303536675 ecr 1884418224], length 0
+22:48:10.609722 IP 172.31.0.3.49736 > 172.31.0.2.8080: Flags [F.], seq 253, ack 180, win 63, options [nop,nop,TS val 1884418224 ecr 3303536675], length 0
+22:48:10.609738 IP 172.31.0.2.8080 > 172.31.0.3.49736: Flags [.], ack 254, win 64, options [nop,nop,TS val 3303536676 ecr 1884418224], length 0
+22:48:10.609742 IP 172.31.0.3.49736 > 172.31.0.2.8080: Flags [.], ack 181, win 63, options [nop,nop,TS val 1884418225 ecr 3303536675], length 0
+22:48:10.613451 IP 172.31.0.3.49740 > 172.31.0.2.8080: Flags [S], seq 2404223951, win 64240, options [mss 1460,sackOK,TS val 3632030036 ecr 0,nop,wscale 10], length 0
+22:48:10.613485 IP 172.31.0.2.8080 > 172.31.0.3.49740: Flags [S.], seq 2924721757, ack 2404223952, win 65160, options [mss 1460,sackOK,TS val 472880662 ecr 3632030036,nop,wscale 10], length 0
+22:48:10.613494 IP 172.31.0.3.49740 > 172.31.0.2.8080: Flags [.], ack 1, win 63, options [nop,nop,TS val 3632030036 ecr 472880662], length 0
+22:48:10.613559 IP 172.31.0.3.49740 > 172.31.0.2.8080: Flags [P.], seq 1:207, ack 1, win 63, options [nop,nop,TS val 3632030036 ecr 472880662], length 206: HTTP: POST /login HTTP/1.1
+22:48:10.613570 IP 172.31.0.2.8080 > 172.31.0.3.49740: Flags [.], ack 207, win 64, options [nop,nop,TS val 472880662 ecr 3632030036], length 0
+22:48:10.613585 IP 172.31.0.3.49740 > 172.31.0.2.8080: Flags [P.], seq 207:253, ack 1, win 63, options [nop,nop,TS val 3632030036 ecr 472880662], length 46: HTTP
+22:48:10.613592 IP 172.31.0.2.8080 > 172.31.0.3.49740: Flags [.], ack 253, win 64, options [nop,nop,TS val 472880662 ecr 3632030036], length 0
+22:48:10.614256 IP 172.31.0.2.8080 > 172.31.0.3.49740: Flags [P.], seq 1:156, ack 253, win 64, options [nop,nop,TS val 472880663 ecr 3632030036], length 155: HTTP: HTTP/1.0 401 Unauthorized
+22:48:10.614282 IP 172.31.0.3.49740 > 172.31.0.2.8080: Flags [.], ack 156, win 63, options [nop,nop,TS val 3632030037 ecr 472880663], length 0
+22:48:10.614363 IP 172.31.0.2.8080 > 172.31.0.3.49740: Flags [P.], seq 156:180, ack 253, win 64, options [nop,nop,TS val 472880663 ecr 3632030037], length 24: HTTP
+22:48:10.614369 IP 172.31.0.3.49740 > 172.31.0.2.8080: Flags [.], ack 180, win 63, options [nop,nop,TS val 3632030037 ecr 472880663], length 0
+22:48:10.614485 IP 172.31.0.3.49740 > 172.31.0.2.8080: Flags [F.], seq 253, ack 180, win 63, options [nop,nop,TS val 3632030037 ecr 472880663], length 0
+22:48:10.614560 IP 172.31.0.2.8080 > 172.31.0.3.49740: Flags [F.], seq 180, ack 254, win 64, options [nop,nop,TS val 472880663 ecr 3632030037], length 0
+22:48:10.614565 IP 172.31.0.3.49740 > 172.31.0.2.8080: Flags [.], ack 181, win 63, options [nop,nop,TS val 3632030037 ecr 472880663], length 0
+22:48:10.615036 IP 172.31.0.3.49742 > 172.31.0.2.8080: Flags [S], seq 180810495, win 64240, options [mss 1460,sackOK,TS val 1214655743 ecr 0,nop,wscale 10], length 0
+22:48:10.615058 IP 172.31.0.2.8080 > 172.31.0.3.49742: Flags [S.], seq 4178605134, ack 180810496, win 65160, options [mss 1460,sackOK,TS val 2533525027 ecr 1214655743,nop,wscale 10], length 0
+22:48:10.615065 IP 172.31.0.3.49742 > 172.31.0.2.8080: Flags [.], ack 1, win 63, options [nop,nop,TS val 1214655743 ecr 2533525027], length 0
+22:48:10.615111 IP 172.31.0.3.49742 > 172.31.0.2.8080: Flags [P.], seq 1:207, ack 1, win 63, options [nop,nop,TS val 1214655743 ecr 2533525027], length 206: HTTP: POST /login HTTP/1.1
+22:48:10.615122 IP 172.31.0.2.8080 > 172.31.0.3.49742: Flags [.], ack 207, win 64, options [nop,nop,TS val 2533525027 ecr 1214655743], length 0
+22:48:10.615135 IP 172.31.0.3.49742 > 172.31.0.2.8080: Flags [P.], seq 207:253, ack 1, win 63, options [nop,nop,TS val 1214655743 ecr 2533525027], length 46: HTTP
+22:48:10.615143 IP 172.31.0.2.8080 > 172.31.0.3.49742: Flags [.], ack 253, win 64, options [nop,nop,TS val 2533525027 ecr 1214655743], length 0
+22:48:10.615488 IP 172.31.0.2.8080 > 172.31.0.3.49742: Flags [P.], seq 1:161, ack 253, win 64, options [nop,nop,TS val 2533525027 ecr 1214655743], length 160: HTTP: HTTP/1.0 429 Too Many Requests
+22:48:10.615514 IP 172.31.0.3.49742 > 172.31.0.2.8080: Flags [.], ack 161, win 63, options [nop,nop,TS val 1214655743 ecr 2533525027], length 0
+22:48:10.615596 IP 172.31.0.2.8080 > 172.31.0.3.49742: Flags [P.], seq 161:186, ack 253, win 64, options [nop,nop,TS val 2533525027 ecr 1214655743], length 25: HTTP
+22:48:10.615601 IP 172.31.0.3.49742 > 172.31.0.2.8080: Flags [.], ack 186, win 63, options [nop,nop,TS val 1214655743 ecr 2533525027], length 0
+22:48:10.615678 IP 172.31.0.3.49742 > 172.31.0.2.8080: Flags [F.], seq 253, ack 186, win 63, options [nop,nop,TS val 1214655743 ecr 2533525027], length 0
+22:48:10.615770 IP 172.31.0.2.8080 > 172.31.0.3.49742: Flags [F.], seq 186, ack 254, win 64, options [nop,nop,TS val 2533525028 ecr 1214655743], length 0
+22:48:10.615775 IP 172.31.0.3.49742 > 172.31.0.2.8080: Flags [.], ack 187, win 63, options [nop,nop,TS val 1214655744 ecr 2533525028], length 0
+22:48:10.616212 IP 172.31.0.3.49758 > 172.31.0.2.8080: Flags [S], seq 389160997, win 64240, options [mss 1460,sackOK,TS val 2893427249 ecr 0,nop,wscale 10], length 0
+22:48:10.616265 IP 172.31.0.2.8080 > 172.31.0.3.49758: Flags [S.], seq 292474828, ack 389160998, win 65160, options [mss 1460,sackOK,TS val 278800413 ecr 2893427249,nop,wscale 10], length 0
+22:48:10.616273 IP 172.31.0.3.49758 > 172.31.0.2.8080: Flags [.], ack 1, win 63, options [nop,nop,TS val 2893427249 ecr 278800413], length 0
+22:48:10.616319 IP 172.31.0.3.49758 > 172.31.0.2.8080: Flags [P.], seq 1:207, ack 1, win 63, options [nop,nop,TS val 2893427249 ecr 278800413], length 206: HTTP: POST /login HTTP/1.1
+22:48:10.616329 IP 172.31.0.2.8080 > 172.31.0.3.49758: Flags [.], ack 207, win 64, options [nop,nop,TS val 278800413 ecr 2893427249], length 0
+22:48:10.616342 IP 172.31.0.3.49758 > 172.31.0.2.8080: Flags [P.], seq 207:253, ack 1, win 63, options [nop,nop,TS val 2893427249 ecr 278800413], length 46: HTTP
+22:48:10.616349 IP 172.31.0.2.8080 > 172.31.0.3.49758: Flags [.], ack 253, win 64, options [nop,nop,TS val 278800413 ecr 2893427249], length 0
+22:48:10.616736 IP 172.31.0.2.8080 > 172.31.0.3.49758: Flags [P.], seq 1:161, ack 253, win 64, options [nop,nop,TS val 278800414 ecr 2893427249], length 160: HTTP: HTTP/1.0 429 Too Many Requests
+22:48:10.616762 IP 172.31.0.3.49758 > 172.31.0.2.8080: Flags [.], ack 161, win 63, options [nop,nop,TS val 2893427250 ecr 278800414], length 0
+22:48:10.616847 IP 172.31.0.2.8080 > 172.31.0.3.49758: Flags [P.], seq 161:186, ack 253, win 64, options [nop,nop,TS val 278800414 ecr 2893427250], length 25: HTTP
+22:48:10.616852 IP 172.31.0.3.49758 > 172.31.0.2.8080: Flags [.], ack 186, win 63, options [nop,nop,TS val 2893427250 ecr 278800414], length 0
+22:48:10.616924 IP 172.31.0.3.49758 > 172.31.0.2.8080: Flags [F.], seq 253, ack 186, win 63, options [nop,nop,TS val 2893427250 ecr 278800414], length 0
+22:48:10.617004 IP 172.31.0.2.8080 > 172.31.0.3.49758: Flags [F.], seq 186, ack 254, win 64, options [nop,nop,TS val 278800414 ecr 2893427250], length 0
+22:48:10.617009 IP 172.31.0.3.49758 > 172.31.0.2.8080: Flags [.], ack 187, win 63, options [nop,nop,TS val 2893427250 ecr 278800414], length 0
+22:48:10.617443 IP 172.31.0.3.49770 > 172.31.0.2.8080: Flags [S], seq 566693964, win 64240, options [mss 1460,sackOK,TS val 371327159 ecr 0,nop,wscale 10], length 0
+22:48:10.617463 IP 172.31.0.2.8080 > 172.31.0.3.49770: Flags [S.], seq 3637358385, ack 566693965, win 65160, options [mss 1460,sackOK,TS val 766858680 ecr 371327159,nop,wscale 10], length 0
+22:48:10.617470 IP 172.31.0.3.49770 > 172.31.0.2.8080: Flags [.], ack 1, win 63, options [nop,nop,TS val 371327159 ecr 766858680], length 0
+22:48:10.617517 IP 172.31.0.3.49770 > 172.31.0.2.8080: Flags [P.], seq 1:207, ack 1, win 63, options [nop,nop,TS val 371327159 ecr 766858680], length 206: HTTP: POST /login HTTP/1.1
+22:48:10.617528 IP 172.31.0.2.8080 > 172.31.0.3.49770: Flags [.], ack 207, win 64, options [nop,nop,TS val 766858680 ecr 371327159], length 0
+22:48:10.617540 IP 172.31.0.3.49770 > 172.31.0.2.8080: Flags [P.], seq 207:253, ack 1, win 63, options [nop,nop,TS val 371327159 ecr 766858680], length 46: HTTP
+22:48:10.617548 IP 172.31.0.2.8080 > 172.31.0.3.49770: Flags [.], ack 253, win 64, options [nop,nop,TS val 766858680 ecr 371327159], length 0
+22:48:10.618014 IP 172.31.0.2.8080 > 172.31.0.3.49770: Flags [P.], seq 1:161, ack 253, win 64, options [nop,nop,TS val 766858681 ecr 371327159], length 160: HTTP: HTTP/1.0 429 Too Many Requests
+22:48:10.618040 IP 172.31.0.3.49770 > 172.31.0.2.8080: Flags [.], ack 161, win 63, options [nop,nop,TS val 371327160 ecr 766858681], length 0
+22:48:10.618120 IP 172.31.0.2.8080 > 172.31.0.3.49770: Flags [P.], seq 161:186, ack 253, win 64, options [nop,nop,TS val 766858681 ecr 371327160], length 25: HTTP
+22:48:10.618126 IP 172.31.0.3.49770 > 172.31.0.2.8080: Flags [.], ack 186, win 63, options [nop,nop,TS val 371327160 ecr 766858681], length 0
+22:48:10.618207 IP 172.31.0.3.49770 > 172.31.0.2.8080: Flags [F.], seq 253, ack 186, win 63, options [nop,nop,TS val 371327160 ecr 766858681], length 0
+22:48:10.618281 IP 172.31.0.2.8080 > 172.31.0.3.49770: Flags [F.], seq 186, ack 254, win 64, options [nop,nop,TS val 766858681 ecr 371327160], length 0
+22:48:10.618287 IP 172.31.0.3.49770 > 172.31.0.2.8080: Flags [.], ack 187, win 63, options [nop,nop,TS val 371327160 ecr 766858681], length 0
+22:48:10.618771 IP 172.31.0.3.49784 > 172.31.0.2.8080: Flags [S], seq 3858608819, win 64240, options [mss 1460,sackOK,TS val 22581012 ecr 0,nop,wscale 10], length 0
+22:48:10.618790 IP 172.31.0.2.8080 > 172.31.0.3.49784: Flags [S.], seq 3589028800, ack 3858608820, win 65160, options [mss 1460,sackOK,TS val 2757210086 ecr 22581012,nop,wscale 10], length 0
+22:48:10.618797 IP 172.31.0.3.49784 > 172.31.0.2.8080: Flags [.], ack 1, win 63, options [nop,nop,TS val 22581012 ecr 2757210086], length 0
+22:48:10.618842 IP 172.31.0.3.49784 > 172.31.0.2.8080: Flags [P.], seq 1:207, ack 1, win 63, options [nop,nop,TS val 22581012 ecr 2757210086], length 206: HTTP: POST /login HTTP/1.1
+22:48:10.618853 IP 172.31.0.2.8080 > 172.31.0.3.49784: Flags [.], ack 207, win 64, options [nop,nop,TS val 2757210086 ecr 22581012], length 0
+22:48:10.618865 IP 172.31.0.3.49784 > 172.31.0.2.8080: Flags [P.], seq 207:258, ack 1, win 63, options [nop,nop,TS val 22581012 ecr 2757210086], length 51: HTTP
+22:48:10.618873 IP 172.31.0.2.8080 > 172.31.0.3.49784: Flags [.], ack 258, win 64, options [nop,nop,TS val 2757210086 ecr 22581012], length 0
+22:48:10.619248 IP 172.31.0.2.8080 > 172.31.0.3.49784: Flags [P.], seq 1:161, ack 258, win 64, options [nop,nop,TS val 2757210086 ecr 22581012], length 160: HTTP: HTTP/1.0 429 Too Many Requests
+22:48:10.619274 IP 172.31.0.3.49784 > 172.31.0.2.8080: Flags [.], ack 161, win 63, options [nop,nop,TS val 22581012 ecr 2757210086], length 0
+22:48:10.619354 IP 172.31.0.2.8080 > 172.31.0.3.49784: Flags [P.], seq 161:186, ack 258, win 64, options [nop,nop,TS val 2757210086 ecr 22581012], length 25: HTTP
+22:48:10.619359 IP 172.31.0.3.49784 > 172.31.0.2.8080: Flags [.], ack 186, win 63, options [nop,nop,TS val 22581012 ecr 2757210086], length 0
+22:48:10.619545 IP 172.31.0.3.49784 > 172.31.0.2.8080: Flags [F.], seq 258, ack 186, win 63, options [nop,nop,TS val 22581012 ecr 2757210086], length 0
+22:48:10.619561 IP 172.31.0.2.8080 > 172.31.0.3.49784: Flags [F.], seq 186, ack 258, win 64, options [nop,nop,TS val 2757210086 ecr 22581012], length 0
+22:48:10.619566 IP 172.31.0.3.49784 > 172.31.0.2.8080: Flags [.], ack 187, win 63, options [nop,nop,TS val 22581012 ecr 2757210086], length 0
+22:48:10.619575 IP 172.31.0.2.8080 > 172.31.0.3.49784: Flags [.], ack 259, win 64, options [nop,nop,TS val 2757210086 ecr 22581012], length 0
+22:48:10.620022 IP 172.31.0.3.49796 > 172.31.0.2.8080: Flags [S], seq 363211019, win 64240, options [mss 1460,sackOK,TS val 1738352235 ecr 0,nop,wscale 10], length 0
+22:48:10.620043 IP 172.31.0.2.8080 > 172.31.0.3.49796: Flags [S.], seq 1506954578, ack 363211020, win 65160, options [mss 1460,sackOK,TS val 2808004362 ecr 1738352235,nop,wscale 10], length 0
+22:48:10.620050 IP 172.31.0.3.49796 > 172.31.0.2.8080: Flags [.], ack 1, win 63, options [nop,nop,TS val 1738352235 ecr 2808004362], length 0
+22:48:10.620099 IP 172.31.0.3.49796 > 172.31.0.2.8080: Flags [P.], seq 1:213, ack 1, win 63, options [nop,nop,TS val 1738352235 ecr 2808004362], length 212: HTTP: GET /users?name=%27+OR+%271%27%3D%271 HTTP/1.1
+22:48:10.620109 IP 172.31.0.2.8080 > 172.31.0.3.49796: Flags [.], ack 213, win 64, options [nop,nop,TS val 2808004362 ecr 1738352235], length 0
+22:48:10.620583 IP 172.31.0.2.8080 > 172.31.0.3.49796: Flags [P.], seq 1:146, ack 213, win 64, options [nop,nop,TS val 2808004362 ecr 1738352235], length 145: HTTP: HTTP/1.0 200 OK
+22:48:10.620609 IP 172.31.0.3.49796 > 172.31.0.2.8080: Flags [.], ack 146, win 63, options [nop,nop,TS val 1738352235 ecr 2808004362], length 0
+22:48:10.620633 IP 172.31.0.2.8080 > 172.31.0.3.49796: Flags [P.], seq 146:159, ack 213, win 64, options [nop,nop,TS val 2808004362 ecr 1738352235], length 13: HTTP
+22:48:10.620636 IP 172.31.0.3.49796 > 172.31.0.2.8080: Flags [.], ack 159, win 63, options [nop,nop,TS val 1738352235 ecr 2808004362], length 0
+22:48:10.620722 IP 172.31.0.3.49796 > 172.31.0.2.8080: Flags [F.], seq 213, ack 159, win 63, options [nop,nop,TS val 1738352235 ecr 2808004362], length 0
+22:48:10.620780 IP 172.31.0.2.8080 > 172.31.0.3.49796: Flags [F.], seq 159, ack 214, win 64, options [nop,nop,TS val 2808004363 ecr 1738352235], length 0
+22:48:10.620785 IP 172.31.0.3.49796 > 172.31.0.2.8080: Flags [.], ack 160, win 63, options [nop,nop,TS val 1738352236 ecr 2808004363], length 0
+22:48:10.791822 IP6 fe80::c059:5fff:fe4a:ef41 > ff02::2: ICMP6, router solicitation, length 16
+reading from file /evidence/run-20261011T224758Z/hardened.pcap, link-type EN10MB (Ethernet), snapshot length 65535

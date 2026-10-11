@@ -1,0 +1,86 @@
+{
+  "vulnerable": {
+    "baseline": [
+      200,
+      {
+        "project": "laboratoire cybermenaces"
+      }
+    ],
+    "normal_lookup": [
+      200,
+      {
+        "users": [
+          "labuser"
+        ]
+      }
+    ],
+    "failed_login_statuses": [
+      401,
+      401,
+      401,
+      401,
+      401,
+      401
+    ],
+    "correct_login_after_attempts": [
+      200,
+      {
+        "authenticated": true
+      }
+    ],
+    "sql_injection": [
+      200,
+      {
+        "users": [
+          "labuser",
+          "analyst"
+        ]
+      }
+    ]
+  },
+  "hardened": {
+    "baseline": [
+      200,
+      {
+        "project": "laboratoire cybermenaces"
+      }
+    ],
+    "normal_lookup": [
+      200,
+      {
+        "users": [
+          "labuser"
+        ]
+      }
+    ],
+    "failed_login_statuses": [
+      401,
+      401,
+      401,
+      429,
+      429,
+      429
+    ],
+    "correct_login_after_attempts": [
+      429,
+      {
+        "error": "rate_limited"
+      }
+    ],
+    "sql_injection": [
+      200,
+      {
+        "users": []
+      }
+    ]
+  },
+  "checks": {
+    "baseline_ok": true,
+    "normal_lookup_ok": true,
+    "sql_injection_reproduced": true,
+    "sql_injection_mitigated": true,
+    "rate_limit_mitigated": true,
+    "vulnerable_login_succeeded": true,
+    "blocked_correct_login": true
+  }
+}

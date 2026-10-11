@@ -1,0 +1,7 @@
+{
+  "checks": 7,
+  "alerts": 6,
+  "phase_switch": true,
+  "untrusted_html_not_executed": true,
+  "javascript_errors": []
+}

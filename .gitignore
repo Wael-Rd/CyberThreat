@@ -1,0 +1,22 @@
+# Local engine, credentials and caches
+.docker-data/
+.docker-host
+.venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+*.sqlite
+*.sqlite3
+*.db
+*.pem
+*.key
+compose.gui.yaml
+reports/
+*.zip
+*.zip.sha256
+# Preserve one published reference run; ignore newly generated runs.
+evidence/*
+!evidence/.gitkeep
+!evidence/run-20261011T224758Z/

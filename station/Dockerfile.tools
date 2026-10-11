@@ -1,0 +1,6 @@
+FROM python:3.12-slim-bookworm@sha256:34386ef0cb081344d7ec1c103ba398e6e9f64e9ab3a1509accc92a4e24a07258
+ENV DEBIAN_FRONTEND=noninteractive
+RUN sed -i "s|http://deb.debian.org/debian$|https://mirrors.kernel.org/debian|" /etc/apt/sources.list.d/debian.sources && apt-get update && apt-get install -y --no-install-recommends nmap tcpdump tshark curl netcat-openbsd iproute2 ca-certificates file yara && rm -rf /var/lib/apt/lists/*
+WORKDIR /app
+# Wireshark GUI is available for authentic offscreen PCAP screenshots.
+RUN apt-get update && apt-get install -y --no-install-recommends wireshark xvfb xauth x11-apps && rm -rf /var/lib/apt/lists/*

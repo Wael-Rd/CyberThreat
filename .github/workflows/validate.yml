@@ -1,0 +1,20 @@
+name: Validate source and MCP
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r mcp_server/requirements.txt
+      - run: python -m compileall -q station target scripts mcp_server tests
+      - run: python tests/test_triage.py
+      - run: python tests/test_mcp.py
+      - run: cd evidence/run-20261011T224758Z && sha256sum -c SHA256SUMS
