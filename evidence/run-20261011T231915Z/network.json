@@ -1,0 +1,50 @@
+[
+    {
+        "Name": "cyberthreat_lab",
+        "Id": "6a0b06d1f7896e1d7c77d5625d4322d64b156e6aed7cd9f59c9ab643f1cee861",
+        "Created": "2026-10-12T01:17:30.709265451+02:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.31.0.0/24",
+                    "Gateway": "172.31.0.1"
+                }
+            ]
+        },
+        "Internal": true,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "55063313b0bdad77bc28abce18399c12544aa5fd4b723a7d16ff5adf6326bcf4": {
+                "Name": "cyberthreat-target-1",
+                "EndpointID": "60b4bb2109952802b80a7b3d4efbf90103d4d79087794d12b2953eeb5e4d400f",
+                "MacAddress": "02:42:ac:1f:00:02",
+                "IPv4Address": "172.31.0.2/24",
+                "IPv6Address": ""
+            },
+            "a11642eab0cbf55edbfccd87525a508a4aca91b03dbd20245141670e8f74afcb": {
+                "Name": "cyberthreat-station-1",
+                "EndpointID": "c2401ee4ee89dc4ccc1baef9a8e775189f3502083a969415e13560eb00211387",
+                "MacAddress": "02:42:ac:1f:00:03",
+                "IPv4Address": "172.31.0.3/24",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.config-hash": "340adf6719ad6d7533cd8b8c8100f8de3b38b64b4c432561fca7ca5bf9f5f9a4",
+            "com.docker.compose.network": "lab",
+            "com.docker.compose.project": "cyberthreat",
+            "com.docker.compose.version": "2.32.4"
+        }
+    }
+]

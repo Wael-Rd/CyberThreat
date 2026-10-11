@@ -5,7 +5,7 @@
 <path d="M58 59V261" stroke="#6a9ed1" stroke-width="3"/>
 <text x="85" y="88" font-family="Arial,sans-serif" font-size="13" letter-spacing="3" fill="#a9bfd5">DETECTION / ANALYSIS / EVIDENCE</text>
 <text x="82" y="163" font-family="Arial,sans-serif" font-weight="700" font-size="64" letter-spacing="-2" fill="#ffffff">CyberThreat</text>
-<text x="85" y="202" font-family="Arial,sans-serif" font-size="20" fill="#bdccdc">An isolated lab for reproducible security analysis.</text>
+<text x="85" y="202" font-family="Arial,sans-serif" font-size="20" fill="#bdccdc">Threat analysis with reproducible evidence.</text>
 <text x="85" y="255" font-family="Arial,sans-serif" font-size="14" fill="#a9bfd5">DOCKER + WSL2</text><circle cx="245" cy="250" r="2" fill="#6a9ed1"/><text x="265" y="255" font-family="Arial,sans-serif" font-size="14" fill="#a9bfd5">PCAP + APPLICATION EVENTS</text><circle cx="516" cy="250" r="2" fill="#6a9ed1"/><text x="535" y="255" font-family="Arial,sans-serif" font-size="14" fill="#a9bfd5">LOCAL MCP</text>
 <g transform="translate(850 72)" fill="none" stroke="#7096ba" stroke-width="1.5"><rect width="108" height="68" rx="6"/><rect x="140" y="108" width="108" height="68" rx="6"/><path d="M108 34H194V108"/><path d="M54 68V142H140"/><circle cx="194" cy="34" r="4" fill="#a8c5df"/></g>
 <text x="867" y="101" font-family="Arial,sans-serif" font-size="12" fill="#dae5f0">STATION</text><text x="867" y="120" font-family="Arial,sans-serif" font-size="10" fill="#94aec8">capture + detect</text><text x="1008" y="209" font-family="Arial,sans-serif" font-size="12" fill="#dae5f0">TARGET</text><text x="1008" y="229" font-family="Arial,sans-serif" font-size="10" fill="#94aec8">controlled traffic</text>

@@ -30,6 +30,12 @@ async def main():
                 link.unlink(missing_ok=True); oversized.unlink(missing_ok=True)
             runs=await client.call_tool('list_evidence',{})
             assert not runs.isError
+            reference=ROOT/'evidence/reference.json'
+            if reference.exists():
+                run_id=json.loads(reference.read_text())['run']
+                summary_result=await client.call_tool('read_evidence',{'run':run_id,'artifact':'evidence-summary.json'})
+                assert not summary_result.isError
+                assert json.loads(summary_result.content[0].text)['checks_passed']==7
             print('PASS MCP stdio: 5 tools; traversal, shell metacharacters, symlink, oversize and arbitrary artifact rejection')
             if '--demo' in sys.argv:
                 result=await client.call_tool('run_detection_demo',{})

@@ -10,4 +10,7 @@ n=json.loads((p/'network.json').read_text())[0]
 assert n['Internal'] is True and len(n['Containers'])==2, 'Unexpected topology'
 triage=json.loads((p/'triage.json').read_text())
 assert triage['executed'] is False and 'Lab_Training_Fixture' in triage['yara_matches']
+summary=json.loads((p/'evidence-summary.json').read_text())
+assert summary['checks_passed']==7 and summary['alert_count']==6
+assert all(summary['phases'][m]['pcap']['packets']>0 for m in ('vulnerable','hardened'))
 print('PASS: scénarios, 6 détections, PCAP et réseau interne à 2 conteneurs')

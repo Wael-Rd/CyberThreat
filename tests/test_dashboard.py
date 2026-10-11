@@ -18,7 +18,32 @@ with sync_playwright() as p:
     assert '</script><img' in page.locator('#strings').inner_text()
     assert page.locator('img').count()==0 and page.evaluate('window.labInjected === undefined')
     page.screenshot(path=str(run/'dashboard-hardened.png'),full_page=True)
+    page.locator('#rule-filter').select_option('SQLI_PATTERN')
+    assert page.locator('#detections .alertitem').count()==1
+    page.locator('#alert-search').fill('no-such-evidence')
+    assert page.locator('#detections .alertitem').count()==0
+    page.locator('#alert-search').fill('')
+    page.locator('#rule-filter').select_option('all')
+    assert page.locator('#detections .alertitem').count()==3
+    assert page.locator('#timeline tr').count()==11
+    assert page.locator('#packets').inner_text().isdigit()
+    with page.expect_download() as event:
+        page.locator('#export-summary').click()
+    download=event.value
+    exported=json.loads(Path(download.path()).read_text())
+    assert exported['phase']=='hardened'
+    assert exported['results']['sql_injection'][1]['users']==[]
+    assert exported['evidence']['pcap']['packets']>0
+    assert len(exported['alerts'])==3
+    page.locator('div.row').screenshot(path=str(run/'investigation-hardened.png'))
+    page.locator('#requests').screenshot(path=str(run/'http-timeline.png'))
+    page.locator('#tools').screenshot(path=str(run/'tool-nmap-dashboard.png'))
+    page.locator('#vulnerable').click()
+    page.locator('div.row').screenshot(path=str(run/'investigation-vulnerable.png'))
+    page.evaluate('data.security.host_sentinel_denied=false;renderSecurity()')
+    assert 'NON VALIDÉ' in page.locator('#security-status').inner_text()
+    page.evaluate('data.security.host_sentinel_denied=true;renderSecurity()')
     assert not errors, errors
     browser.close()
-(run/'dashboard-tests.json').write_text(json.dumps({'checks':7,'alerts':6,'phase_switch':True,'untrusted_html_not_executed':True,'javascript_errors':errors},indent=2))
+(run/'dashboard-tests.json').write_text(json.dumps({'checks':7,'alerts':6,'phase_switch':True,'untrusted_html_not_executed':True,'alert_filtering':True,'summary_export':True,'http_timeline':True,'javascript_errors':errors},indent=2))
 print('PASS dashboard: real results, phase switch, embedded HTML injection inert, screenshots saved')

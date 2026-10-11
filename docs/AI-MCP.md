@@ -1,4 +1,4 @@
-# Malware Analysis Lab : AI-assisted Detection
+# CyberThreat : Threat Analysis : AI-assisted Detection
 
 ## Idée et périmètre
 
@@ -28,7 +28,7 @@ Configuration générique pour un client **lancé dans WSL** :
 ```json
 {
   "mcpServers": {
-    "malware-analysis-lab": {
+    "cyberthreat": {
       "command": "/absolute/path/to/CyberThreat/.venv/bin/python",
       "args": ["/absolute/path/to/CyberThreat/mcp_server/server.py"]
     }
@@ -45,7 +45,7 @@ Un client Windows doit lancer ce Python via `wsl.exe -d <distribution> -- ...`; 
 | lab_status | État Compose du projet |
 | run_detection_demo | Scénarios synthétiques fixes + PCAP + règles + rapport |
 | list_evidence | Identifiants des exécutions |
-| read_evidence | Lecture d'un artefact allowlisté, ≤100 ko |
+| read_evidence | Lecture d'un artefact allowlisté, dont evidence-summary.json, ≤100 ko |
 | static_triage | Analyse dans station, échantillon local ≤10 Mo, aucune exécution |
 
 Pour soumettre un fichier au triage, le déposer manuellement dans `samples/` avec un nom simple, puis appeler `static_triage`. Le fichier n'est pas envoyé à un service de réputation. Les chaînes retournées au client peuvent en revanche être transmises au fournisseur du modèle par ce client; utiliser le fixture fourni pour la scénario de référence.
@@ -72,14 +72,14 @@ Vérification locale : `python3 tests/test_mcp.py --docker` (serveur stdio et ap
 
 ## OpenCode : configuration livrée
 
-`opencode.json` à la racine configure le MCP local et l'agent primaire `lab-analyst`. Cet agent autorise seulement les outils `malware-analysis-lab_*`; les outils généraux bash, édition, web et les autres MCP sont désactivés pour cet agent. Une autre sélection d'agent ne conserve pas nécessairement ce périmètre.
+`opencode.json` à la racine configure le MCP local et l'agent primaire `threat-analyst`. Cet agent autorise seulement les outils `cyberthreat_*`; les outils généraux bash, édition, web et les autres MCP sont désactivés pour cet agent. Une autre sélection d'agent ne conserve pas nécessairement ce périmètre.
 
 ```bash
 ./scripts/lab.sh up
 opencode mcp list
-opencode --agent lab-analyst
+opencode --agent threat-analyst
 ```
 
-Demande initiale : « Utilise le MCP malware-analysis-lab pour examiner le dernier run, analyser le fixture inoffensif et expliquer les trois scénarios avec les preuves. » Pour une nouvelle exécution : « Lance run_detection_demo puis compare les résultats avant/après. » Le modèle/fournisseur existant d'OpenCode est conservé; aucun secret ou clé n'est ajouté au projet.
+Demande initiale : « Utilise le MCP cyberthreat pour examiner le dernier run, analyser le fixture inoffensif et expliquer les trois scénarios avec les preuves. » Pour une nouvelle exécution : « Lance run_detection_demo puis compare les résultats avant/après. » Le modèle/fournisseur existant d'OpenCode est conservé; aucun secret ou clé n'est ajouté au projet.
 
 Sources : [MCP local et préfixes d'outils OpenCode](https://docs.opencode.ai/docs/mcp-servers/), [permissions et motifs](https://docs.opencode.ai/docs/permissions/).

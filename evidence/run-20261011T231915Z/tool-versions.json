@@ -1,0 +1,11 @@
+{
+  "nmap": "Nmap version 7.93 ( https://nmap.org )",
+  "tshark": "TShark (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).",
+  "tcpdump": "tcpdump version 4.99.3",
+  "yara": "4.2.3",
+  "file": "file-5.44",
+  "netcat": "OpenBSD netcat (Debian patchlevel 1.219-1)",
+  "wireshark": "Wireshark 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).",
+  "dumpcap": "Dumpcap (Wireshark) 4.0.17 (Git v4.0.17 packaged as 4.0.17-0+deb12u3).",
+  "opencode": "1.18.35"
+}

@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "run": "run-20261011T231915Z",
+  "checks_passed": 7,
+  "checks_total": 7,
+  "alert_count": 6,
+  "phases": {
+    "vulnerable": {
+      "pcap": {
+        "packets": 353,
+        "file_bytes": 33109,
+        "captured_bytes": 27437,
+        "duration_seconds": 3.403,
+        "sha256": "fe3dd7cdc943b3c1075cd95b07192c0d5f3c3cc41157761e14e2386657d3660e"
+      },
+      "http_requests": 11,
+      "timeline": [
+        {
+          "frame": 4,
+          "seconds": 0.0,
+          "method": "GET",
+          "uri": "/"
+        },
+        {
+          "frame": 16,
+          "seconds": 0.002,
+          "method": "GET",
+          "uri": "/users?name=labuser"
+        },
+        {
+          "frame": 232,
+          "seconds": 3.389,
+          "method": "GET",
+          "uri": "/health"
+        },
+        {
+          "frame": 246,
+          "seconds": 3.392,
+          "method": "POST",
+          "uri": "/login"
+        },
+        {
+          "frame": 260,
+          "seconds": 3.394,
+          "method": "POST",
+          "uri": "/login"
+        },
+        {
+          "frame": 274,
+          "seconds": 3.395,
+          "method": "POST",
+          "uri": "/login"
+        },
+        {
+          "frame": 288,
+          "seconds": 3.397,
+          "method": "POST",
+          "uri": "/login"
+        },
+        {
+          "frame": 302,
+          "seconds": 3.398,
+          "method": "POST",
+          "uri": "/login"
+        },
+        {
+          "frame": 317,
+          "seconds": 3.399,
+          "method": "POST",
+          "uri": "/login"
+        },
+        {
+          "frame": 332,
+          "seconds": 3.401,
+          "method": "POST",
+          "uri": "/login"
+        },
+        {
+          "frame": 345,
+          "seconds": 3.402,
+          "method": "GET",
+          "uri": "/users?name=%27+OR+%271%27%3D%271"
+        }
+      ],
+      "scan_ports": [
+        {
+          "port": 8080,
+          "state": "open",
+          "service": "http-proxy"
+        }
+      ],
+      "alerts": 3,
+      "login_statuses": [
+        401,
+        401,
+        401,
+        401,
+        401,
+        401,
+        200
+      ]
+    },
+    "hardened": {
+      "pcap": {
+        "packets": 351,
+        "file_bytes": 32958,
+        "captured_bytes": 27318,
+        "duration_seconds": 3.381,
+        "sha256": "eac0fe9981aa56b8481f3dfa4077ed2cf59d3501e3310b8ad9b73c23dee7463e"
+      },
+      "http_requests": 11,
+      "timeline": [
+        {
+          "frame": 4,
+          "seconds": 0.0,
+          "method": "GET",
+          "uri": "/"
+        },
+        {
+          "frame": 16,
+          "seconds": 0.001,
+          "method": "GET",
+          "uri": "/users?name=labuser"
+        },
+        {
+          "frame": 232,
+          "seconds": 3.369,
+          "method": "GET",
+          "uri": "/health"
+        },
+        {
+          "frame": 246,
+          "seconds": 3.371,
+          "method": "POST",
+          "uri": "/login"
+        },
+        {
+          "frame": 260,
+          "seconds": 3.373,
+          "method": "POST",
+          "uri": "/login"
+        },
+        {
+          "frame": 274,
+          "seconds": 3.374,
+          "method": "POST",
+          "uri": "/login"
+        },
+        {
+          "frame": 288,
+          "seconds": 3.375,
+          "method": "POST",
+          "uri": "/login"
+        },
+        {
+          "frame": 302,
+          "seconds": 3.376,
+          "method": "POST",
+          "uri": "/login"
+        },
+        {
+          "frame": 316,
+          "seconds": 3.378,
+          "method": "POST",
+          "uri": "/login"
+        },
+        {
+          "frame": 330,
+          "seconds": 3.379,
+          "method": "POST",
+          "uri": "/login"
+        },
+        {
+          "frame": 342,
+          "seconds": 3.38,
+          "method": "GET",
+          "uri": "/users?name=%27+OR+%271%27%3D%271"
+        }
+      ],
+      "scan_ports": [
+        {
+          "port": 8080,
+          "state": "open",
+          "service": "http-proxy"
+        }
+      ],
+      "alerts": 3,
+      "login_statuses": [
+        401,
+        401,
+        401,
+        429,
+        429,
+        429,
+        429
+      ]
+    }
+  },
+  "memory_snapshot": [
+    {
+      "service": "station",
+      "usage_mib": 4.828,
+      "limit_mib": 384.0
+    },
+    {
+      "service": "target",
+      "usage_mib": 21.18,
+      "limit_mib": 128.0
+    }
+  ],
+  "memory_snapshot_total_mib": 26.01,
+  "resource_note": "Snapshot captured at the end of the scenario; not an idle benchmark."
+}

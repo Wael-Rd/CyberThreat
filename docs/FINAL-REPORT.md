@@ -1,19 +1,11 @@
-# Rapport technique final : Malware Analysis Lab
-
-Projet, laboratoire de détection des cybermenaces. Référence : `run-20261011T224758Z`, 11 octobre 2026.
-
-## Architecture et objectif
-
-Deux conteneurs sur un réseau interne : station `172.31.0.3` et cible HTTP `172.31.0.2:8080`. La station capture son propre trafic. La cible contient uniquement des comptes synthétiques. Les limites cumulées sont 512 MiB de RAM et 1,25 CPU; le moteur Docker et WSL2 consomment des ressources supplémentaires. La mesure au repos des services est environ 33 MiB.
-
-## Analyse fondée sur les preuves
+# CyberThreat : Threat Analysis
 
 # Rapport technique
 
-Exécution : run-20261011T224758Z
+Exécution : run-20261011T231915Z
 
 ## Périmètre
-Deux conteneurs Docker sur réseau internal, cible pédagogique et station de test. Données synthétiques uniquement. Les conteneurs partagent le noyau WSL2 et ne satisfont pas littéralement une exigence de deux VM.
+Deux conteneurs Docker sur réseau internal, cible synthétique et station de test. Données synthétiques uniquement. Les conteneurs partagent le noyau WSL2 et ne fournissent pas une isolation de type VM.
 
 ## Résultats vérifiés
 
@@ -29,10 +21,10 @@ Deux conteneurs Docker sur réseau internal, cible pédagogique et station de te
 
 - {"mode": "vulnerable", "rule": "SCAN_PORTS", "evidence": "vulnerable-syn.tsv", "distinct_ports": 101, "confidence": "forte dans ce scénario; un inventaire autorisé peut produire la même alerte"}
 - {"mode": "vulnerable", "rule": "LOGIN_BURST", "evidence": "app.jsonl", "count": 6, "confidence": "tentatives répétées; ne prouve pas une compromission"}
-- {"mode": "vulnerable", "rule": "SQLI_PATTERN", "evidence": "vulnerable-http.tsv", "frame": "347", "confidence": "signature pédagogique; succès confirmé séparément par results.json"}
+- {"mode": "vulnerable", "rule": "SQLI_PATTERN", "evidence": "vulnerable-http.tsv", "frame": "345", "confidence": "signature pédagogique; succès confirmé séparément par results.json"}
 - {"mode": "hardened", "rule": "SCAN_PORTS", "evidence": "hardened-syn.tsv", "distinct_ports": 101, "confidence": "forte dans ce scénario; un inventaire autorisé peut produire la même alerte"}
 - {"mode": "hardened", "rule": "LOGIN_BURST", "evidence": "app.jsonl", "count": 3, "confidence": "tentatives répétées; ne prouve pas une compromission"}
-- {"mode": "hardened", "rule": "SQLI_PATTERN", "evidence": "hardened-http.tsv", "frame": "345", "confidence": "signature pédagogique; succès confirmé séparément par results.json"}
+- {"mode": "hardened", "rule": "SQLI_PATTERN", "evidence": "hardened-http.tsv", "frame": "342", "confidence": "signature pédagogique; succès confirmé séparément par results.json"}
 
 ## Analyse et mitigation
 
@@ -50,17 +42,8 @@ Règles offline dédiées aux scénarios, pas un IDS de production. Pas de DoS, 
 ## Preuves
 PCAP vulnérable/renforcé, scans Nmap XML/TXT, Netcat, champs TShark TSV, événements JSONL, résultats JSON et empreintes SHA256. Voir le guide pour les captures Wireshark et Burp.
 
+## Synthèse structurée et interface
 
-## Interprétation et mitigations
+`evidence-summary.json` contient les métadonnées PCAP, la chronologie HTTP, les ports Nmap et la mesure RAM de fin de scénario. Le dashboard ajoute filtrage, recherche et export JSON. Les contrôles Chromium couvrent les interactions et le caractère inerte des chaînes HTML.
 
-Le scan révèle une reconnaissance, sans prouver une compromission. Les essais de connexion démontrent une rafale de tentatives. La tautologie SQL montre une exposition de deux noms synthétiques dans la phase vulnérable; la requête paramétrée supprime cette exposition dans la phase durcie. La limitation des échecs produit HTTP 429, avec un compromis visible : un utilisateur légitime peut être temporairement bloqué. En production, combiner limites par compte et source, temporisation, MFA, journalisation et supervision.
-
-Les signatures de détection restent actives après mitigation : elles signalent la tentative même si son effet est empêché. Les seuils sont pédagogiques et ne sont pas une validation de performances sur du trafic réel. Les règles YARA du fixture sont des indicateurs de formation, pas une preuve de malware.
-
-## Extension MCP et livraison
-
-Le serveur MCP expose cinq outils bornés pour lancer le scénario, vérifier l’état, consulter les preuves et effectuer le triage statique. L’intégration native OpenCode est connectée; aucun appel LLM payant n’a été lancé. Les contenus des échantillons sont des données non fiables.
-
-Voir [validation de sécurité](SECURITY-VALIDATION.md), [workflow de validation](VALIDATION-WORKFLOW.md), [intégration OpenCode](AI-MCP.md) et [runbook](RUNBOOK.md). Les [preuves](../evidence/run-20261011T224758Z/dashboard.html) comprennent deux PCAP, les résultats Nmap/Netcat/tcpdump/TShark, journaux, triage, quatre captures PNG et le manifeste SHA-256.
-
-Les conteneurs partagent le noyau WSL2 et ne fournissent pas une isolation de type VM. Aucune garantie absolue d’absence d’évasion et aucune exécution de malware inconnu ne sont revendiquées.
+Voir [rapport illustré](reports/CyberThreat-Technical-Report.pdf), [runbook](RUNBOOK.md) et [contrôles de sécurité](SECURITY-VALIDATION.md).

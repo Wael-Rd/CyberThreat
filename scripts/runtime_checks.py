@@ -2,6 +2,10 @@ import json, os, socket, subprocess, sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 if (ROOT/'.docker-host').exists(): os.environ['DOCKER_HOST']=(ROOT/'.docker-host').read_text().strip()
+output=Path(sys.argv[1]).resolve()
+if output.parent.parent!=(ROOT/'evidence').resolve() or not output.parent.name.startswith('run-') or not output.parent.is_dir():
+    raise ValueError('Output must be inside an existing evidence/run-* directory')
+
 def run(args): return subprocess.check_output(args,cwd=ROOT,text=True,timeout=20)
 ids=run(['docker','compose','ps','-q']).split()
 assert len(ids)==2
@@ -34,9 +38,12 @@ worker=json.loads(run(['docker','compose','exec','-T','--user','65534:65534','st
 assert worker['uid']==65534 and int(worker['cap_effective'],16)==0
 write_probe="from pathlib import Path\ntry:\n Path("+repr('/evidence/'+Path(sys.argv[1]).parent.name+'/static-write-probe')+").write_text('probe'); print('WRITABLE')\nexcept PermissionError: print('DENIED')"
 assert run(['docker','compose','exec','-T','--user','65534:65534','station','python3','-c',write_probe]).strip()=='DENIED'
+existing_probe="from pathlib import Path\ntry:\n f=Path("+repr('/evidence/'+output.parent.name+'/results.json')+").open('r+b'); f.close(); print('WRITABLE')\nexcept PermissionError: print('DENIED')"
+assert run(['docker','compose','exec','-T','--user','65534:65534','station','python3','-c',existing_probe]).strip()=='DENIED'
 worker['evidence_write_denied']=True
+worker['existing_evidence_write_denied']=True
 probes['static_worker']=worker
-network=json.loads(run(['docker','network','inspect','malware-analysis-lab_lab']))[0]
+network=json.loads(run(['docker','network','inspect','cyberthreat_lab']))[0]
 gateway=network['IPAM']['Config'][0]['Gateway']
 with socket.socket() as listener:
     listener.bind((gateway,0)); listener.listen(2); port=listener.getsockname()[1]

@@ -1,14 +1,34 @@
 # Publication validation
 
-Validated locally on 12 October 2026 from the publication checkout.
+Validated locally on 12 October 2026. The reference is selected by `evidence/reference.json`.
 
-- Static triage test: passed (known SHA-256, inert indicators, no execution, empty file).
-- Real MCP SDK stdio: passed; five tools and rejected traversal, shell metacharacters, symlink, oversized file and arbitrary artefact requests.
-- Native OpenCode MCP: malware-analysis-lab connected using the portable wrapper.
-- Published reference scenario: seven functional checks and six alerts verified.
-- Reference evidence SHA-256 manifest: all files match.
-- README local links: all resolve.
-- Publication scan: no recognised provider-token/private-key markers, local engine storage or workstation home paths included. This is a targeted scan, not an exhaustive secret-detection guarantee.
-- Report: 13 A4 pages, no long dash character in extracted PDF text; no footer overlap.
+## Runtime and transport
 
-The Docker scenarios and host-isolation tests were recorded in the Linux working checkout. They were not rerun from the Windows-mounted publication folder. The CI workflow validates source and SDK behaviour only; its hosted result must be checked after publication. No hosted LLM call was performed.
+- Full controlled scenario through the real MCP SDK: passed after rebranding.
+- Seven application assertions and six alerts: passed.
+- Native OpenCode connection: `cyberthreat` connected.
+- Docker state and static triage through MCP: passed.
+- Traversal, shell metacharacters, symlinks, oversized samples and arbitrary artifacts: rejected.
+- Host guard missing: triage refused; guard restored and call succeeded.
+- Kernel/runtime controls: recorded in `runtime-checks.json` and `sandbox-audit.json`.
+
+## Interface and evidence
+
+- Browser phase switch, rule filter, text search and JSON export: passed.
+- HTTP timeline linked to the recorded packet frames: verified.
+- Embedded HTML control: inert; no injected image or script marker.
+- A failed host-sentinel flag is displayed as unvalidated rather than successful.
+- PCAP hashes and metadata match the recorded files; truncated inputs are rejected.
+- Memory is reported as a post-scenario snapshot, not an idle benchmark.
+
+## Report and packaging
+
+- 25 A4 pages with 16 numbered figures and embedded diagrams.
+- No content overlaps the page footers.
+- Tagged PDF with linked contents, at least ten raster images and correct reference values.
+- No private workstation links or long dash character in extracted PDF text.
+- README links, vector assets and file manifests verified offline.
+
+The Docker scenarios and host-isolation checks were performed in the Linux working checkout, not the Windows-mounted publication folder. CI checks static triage, MCP stdio, capture metadata, report structure and publication integrity. Hosted LLM reasoning and Burp GUI traffic are outside the validation scope.
+
+A targeted publication scan excludes provider-token markers, private keys, databases, Docker storage and workstation home paths. It is not an exhaustive secret-detection guarantee.

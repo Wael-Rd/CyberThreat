@@ -1,0 +1,7 @@
+{
+  "reference_run": "run-20261011T231915Z",
+  "diagrams": "Explanatory diagrams of implemented architecture, not screenshots.",
+  "plots": "Derived from results.json and evidence-summary.json.",
+  "tool_output_views": "Rendered views of the recorded text artifacts; not GUI screenshots.",
+  "wireshark": "Actual GUI captures in the reference evidence directory."
+}

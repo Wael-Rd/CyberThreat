@@ -1,3 +1,0 @@
-NAME                             IMAGE                          COMMAND               SERVICE   CREATED          STATUS                    PORTS
-malware-analysis-lab-station-1   malware-analysis-lab-station   "sleep infinity"      station   31 seconds ago   Up 21 seconds             
-malware-analysis-lab-target-1    malware-analysis-lab-target    "python3 -u app.py"   target    44 seconds ago   Up 28 seconds (healthy)   

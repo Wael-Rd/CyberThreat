@@ -1,4 +1,4 @@
-name: malware-analysis-lab
+name: cyberthreat
 services:
   target:
     build: ./target

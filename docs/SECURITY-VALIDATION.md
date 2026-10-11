@@ -1,6 +1,6 @@
 # Validation de sécurité
 
-Exécution de référence : `run-20261011T224758Z`, 11 octobre 2026. Les tests portent sur ce laboratoire local et ses scénarios synthétiques. Ils ne démontrent pas une impossibilité universelle d’évasion.
+Exécution de référence : `run-20261011T231915Z`, 11 octobre 2026. Les tests portent sur ce laboratoire local et ses scénarios synthétiques. Ils ne démontrent pas une impossibilité universelle d’évasion.
 
 ## Résultats observés
 
@@ -22,11 +22,11 @@ Exécution de référence : `run-20261011T224758Z`, 11 octobre 2026. Les tests p
 | Protection du bridge absente | Appel de triage refusé; protection restaurée puis appel réussi |
 | Chaîne HTML malveillante dans le fichier de formation | Affichée comme texte; aucun script exécuté dans Chromium |
 
-Preuves : `runtime-checks-latest.json`, `sandbox-audit-latest.json`, `dashboard-tests.json` et journaux de validation dans le dossier de référence. Les tests sont rejouables avec les scripts et fichiers `tests/`.
+Preuves : `runtime-checks.json`, `sandbox-audit.json`, `dashboard-tests.json` et journaux de validation dans le dossier de référence. Les tests sont rejouables avec les scripts et fichiers `tests/`.
 
 ## Frontières de confiance
 
-L’hôte, Docker, le code MCP et l’utilisateur OpenCode sont de confiance. Le MCP s’exécute sur l’hôte et dispose du pouvoir nécessaire pour orchestrer ses propres conteneurs : il n’est pas lui-même une barrière contre un administrateur malveillant. Ses cinq outils utilisent des arguments fixes et des chemins validés; aucun outil shell général n’est exposé. L’agent `lab-analyst` autorise seulement ces outils. Les autres agents et changements manuels de configuration restent sous contrôle de l’utilisateur.
+L’hôte, Docker, le code MCP et l’utilisateur OpenCode sont de confiance. Le MCP s’exécute sur l’hôte et dispose du pouvoir nécessaire pour orchestrer ses propres conteneurs : il n’est pas lui-même une barrière contre un administrateur malveillant. Ses cinq outils utilisent des arguments fixes et des chemins validés; aucun outil shell général n’est exposé. L’agent `threat-analyst` autorise seulement ces outils. Les autres agents et changements manuels de configuration restent sous contrôle de l’utilisateur.
 
 Le filtrage INPUT dédié interdit les nouvelles connexions du bridge vers l’hôte; il conserve les réponses aux connexions initiées par l’hôte. Il ne modifie pas les politiques globales du pare-feu. Le réseau interne et le test de sortie valident la configuration courante, sans constituer une protection contre une faille du noyau.
 
@@ -39,3 +39,7 @@ Deux conteneurs partagent le noyau WSL2 : ce ne sont pas deux VM. Aucun malware 
 Versions observées : Docker 27.5.1+dfsg4, runc 1.3.3+ds1, noyau 6.18.33.2-microsoft-standard-WSL2. runc 1.3.3 est une version corrigée pour les problèmes identifiés dans [l’avis officiel GHSA-9493-h29p-rfm2](https://github.com/opencontainers/runc/security/advisories/GHSA-9493-h29p-rfm2). Cela n’est pas un audit exhaustif des vulnérabilités ni une garantie d’absence d’évasion. Le noyau ne fournit pas la limite de swap Docker; le plafond mémoire RAM est bien vérifié.
 
 Le test de connexion native OpenCode et les appels SDK MCP ont réussi. Aucune requête à un modèle payant n’a été effectuée : l’interprétation par un LLM reste à démontrer manuellement. Burp Suite Community 2025.10.6-43347 est disponible et son lancement CLI est vérifié; sa session GUI/Repeater reste manuelle. Les captures Wireshark GUI et les interactions du dashboard ont été réellement exécutées.
+
+## Vérification après mise à jour
+
+`runtime-checks-release.json` vérifie les conteneurs reconstruits. Le worker statique ne peut ni créer une preuve ni ouvrir `results.json` en écriture. Ce contrôle couvre aussi les permissions des fichiers existants après synchronisation depuis la copie de publication. Aucun octet des preuves n’est modifié par ce test.

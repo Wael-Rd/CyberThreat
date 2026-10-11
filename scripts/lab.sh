@@ -5,8 +5,8 @@ if [[ -f .docker-host ]]; then export DOCKER_HOST="$(cat .docker-host)"; fi
 case "${1:-help}" in
   doctor) docker version; docker compose version; docker compose config --quiet ;;
   build)
-    if ! docker image inspect malware-analysis-lab-tools-base > /dev/null 2>&1; then
-      docker build --network host -f station/Dockerfile.tools -t malware-analysis-lab-tools-base station
+    if ! docker image inspect cyberthreat-tools-base > /dev/null 2>&1; then
+      docker build --network host -f station/Dockerfile.tools -t cyberthreat-tools-base station
     fi
     docker compose build
     ;;
@@ -19,7 +19,7 @@ case "${1:-help}" in
     chmod 775 "evidence/$run"
     sudo -n chgrp 0 "evidence/$run"
     docker compose config > "evidence/$run/compose-resolved.yaml"
-    docker network inspect malware-analysis-lab_lab > "evidence/$run/network.json"
+    docker network inspect cyberthreat_lab > "evidence/$run/network.json"
     docker compose exec -T -e LAB_RUN="$run" station python3 /app/run.py
     for phase in vulnerable hardened; do
       docker compose exec -T --user 1000:1000 station tcpdump -nn -r "/evidence/$run/$phase.pcap" > "evidence/$run/$phase-tcpdump.txt" 2>&1
@@ -29,6 +29,8 @@ case "${1:-help}" in
     docker compose ps > "evidence/$run/containers.txt"
     docker stats --no-stream $(docker compose ps -q) > "evidence/$run/resources.txt"
     python3 scripts/runtime_checks.py "evidence/$run/runtime-checks.json"
+    docker compose exec -T --user 1000:1000 station python3 /app/evidence_summary.py "/evidence/$run" > /dev/null
+    docker compose exec -T -e LAB_RUN="$run" station python3 /app/analyze.py
     python3 scripts/verify.py "evidence/$run"
     (cd "evidence/$run"; sha256sum *.pcap *.json *.jsonl *.txt *.tsv *.xml *.html *.md > SHA256SUMS)
     echo "Preuves : $PWD/evidence/$run"

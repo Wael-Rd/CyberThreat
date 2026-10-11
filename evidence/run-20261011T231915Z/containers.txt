@@ -1,0 +1,3 @@
+NAME                    IMAGE                 COMMAND               SERVICE   CREATED         STATUS                        PORTS
+cyberthreat-station-1   cyberthreat-station   "sleep infinity"      station   2 minutes ago   Up About a minute             
+cyberthreat-target-1    cyberthreat-target    "python3 -u app.py"   target    2 minutes ago   Up About a minute (healthy)   

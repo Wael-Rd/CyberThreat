@@ -1,0 +1,7 @@
+[10/12/26 01:19:51] INFO     Processing request of type            server.py:720
+                             CallToolRequest                                    
+[10/12/26 01:19:52] INFO     Processing request of type            server.py:720
+                             CallToolRequest                                    
+[10/12/26 01:19:53] INFO     Processing request of type            server.py:720
+                             ListToolsRequest                                   
+PASS: static triage fails closed without host guard; guard restored and call succeeds

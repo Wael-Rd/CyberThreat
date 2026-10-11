@@ -20,7 +20,7 @@ The workflow separates generated traffic, observed indicators and verified effec
 
 ## Reference snapshot
 
-The published run is `run-20261011T224758Z`. Runtime network checks, evidence integrity and MCP SDK tests are distinct validations. The publication checkout also verifies portable OpenCode connectivity.
+The published run is `run-20261011T231915Z`. Runtime network checks, evidence integrity and MCP SDK tests are distinct validations. The publication checkout also verifies portable OpenCode connectivity.
 
 The CI checks static triage, MCP stdio and reference checksums. It does not validate WSL2 host isolation, hosted model reasoning or Burp GUI behaviour.
 

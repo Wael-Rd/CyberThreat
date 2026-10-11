@@ -1,0 +1,6 @@
+dumpcap: cap_set_proc() fail return: Operation not permitted
+dumpcap: cap_set_proc() fail return: Operation not permitted
+Capturing on 'eth0'
+File: /evidence/run-20261011T231915Z/vulnerable.pcap
+Packets: 25 Packets: 55 Packets: 85 Packets: 115 Packets: 161 Packets: 191 Packets: 353 Packets captured: 353
+Packets received/dropped on interface 'eth0': 353/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)

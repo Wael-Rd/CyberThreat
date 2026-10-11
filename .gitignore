@@ -2,6 +2,7 @@
 .docker-data/
 .docker-host
 .venv/
+.report-venv/
 .env
 .env.*
 !.env.example
@@ -19,4 +20,9 @@ compose.gui.yaml
 # Preserve one published reference run; ignore newly generated runs.
 evidence/*
 !evidence/.gitkeep
-!evidence/run-20261011T224758Z/
+!evidence/reference.json
+!evidence/run-20261011T231915Z/
+
+# Only the inert fixture is published.
+samples/*
+!samples/harmless-training.txt

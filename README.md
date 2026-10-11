@@ -4,9 +4,9 @@
 
 <br>
 
-**An isolated environment for network threat detection and evidence-driven analysis.**
+**Threat Analysis: controlled network scenarios, verifiable evidence and scoped MCP tools.**
 
-[Quick start](#quick-start) · [Architecture](#architecture) · [Technical report](docs/reports/CyberThreat-Technical-Report.pdf) · [Reference evidence](evidence/run-20261011T224758Z) · [MCP integration](docs/AI-MCP.md)
+[Quick start](#quick-start) · [Architecture](#architecture) · [Technical report](docs/reports/CyberThreat-Technical-Report.pdf) · [Reference evidence](evidence/run-20261011T231915Z) · [MCP integration](docs/AI-MCP.md)
 
 </div>
 
@@ -14,7 +14,9 @@
 
 CyberThreat captures controlled attack traffic, correlates network observations with application events, and compares vulnerable and hardened service behaviour. It runs two resource-limited Docker containers and exposes a local MCP server for evidence inspection and static file triage from OpenCode.
 
-The repository includes executable scenarios, packet captures, detection rules, application logs, a comparison dashboard and a technical report. Results are tied to a recorded reference run rather than illustrative output.
+The illustrated [technical report](docs/reports/CyberThreat-Technical-Report.pdf) contains **25 pages**, **16 numbered figures**, architecture diagrams, tool-output views and real Wireshark captures.
+
+The repository includes executable scenarios, packet captures, detection rules, application logs, an interactive evidence explorer and an illustrated technical report. Results are tied to a recorded reference run rather than illustrative output.
 
 | Capability | Implementation |
 |---|---|
@@ -31,18 +33,18 @@ The repository includes executable scenarios, packet captures, detection rules, 
 |---|---|
 | Functional assertions | **7 passed** |
 | Detection output | **6 alerts** across 3 rule families and 2 phases |
-| Evidence | **2 PCAP files**, **4 screenshots**, JSON/JSONL, TSV and Nmap XML |
+| Evidence | **2 PCAP files**, tool and interface screenshots, JSON/JSONL, TSV and Nmap XML |
 | Container memory limits | **512 MiB** combined |
 | Container CPU limits | **1.25 CPU** combined |
-| Measured service memory at idle | Approximately **33 MiB**, excluding Docker and WSL2 |
+| Recorded service memory | **26.01 MiB** in the recorded post-scenario snapshot, excluding Docker and WSL2 |
 | MCP validation | SDK calls and native OpenCode connection verified |
 
-Reference: [`run-20261011T224758Z`](evidence/run-20261011T224758Z). The published snapshot includes a [SHA-256 manifest](evidence/run-20261011T224758Z/SHA256SUMS) and [publication notes](evidence/run-20261011T224758Z/PUBLICATION-NOTES.md).
+Reference: [`run-20261011T231915Z`](evidence/run-20261011T231915Z). The published snapshot includes a [SHA-256 manifest](evidence/run-20261011T231915Z/SHA256SUMS) and [publication notes](evidence/run-20261011T231915Z/PUBLICATION-NOTES.md).
 
 <details>
 <summary><strong>View the comparison dashboard</strong></summary>
 
-![Hardened-phase observations and static triage results](evidence/run-20261011T224758Z/dashboard-hardened.png)
+![Hardened-phase observations and static triage results](evidence/run-20261011T231915Z/dashboard-hardened.png)
 
 Clone the repository and open `START-HERE.html` or the reference run's `dashboard.html` locally. GitHub displays HTML source instead of running these interfaces.
 
@@ -77,6 +79,9 @@ For an already installed but stopped local Docker Engine, the optional `scripts/
 
 ## Architecture
 
+![Implemented architecture and network boundary](docs/assets/report/architecture.svg)
+
+
 ```mermaid
 flowchart LR
     Client[OpenCode] <-->|Local MCP stdio| MCP[Scoped orchestration]
@@ -95,6 +100,12 @@ flowchart LR
 | `station` | 384 MiB | 0.75 | 128 | Traffic generation, capture, detection and static triage |
 
 The MCP server runs on the trusted host, outside the containers. No Docker socket is mounted into either service. The station captures its own traffic to the target. The Docker daemon, build cache and WSL2 consume resources beyond these service limits.
+
+## Evidence explorer
+
+The standalone dashboard provides a frame-linked HTTP timeline, phase comparison, rule and text filters, recorded Nmap output and JSON export. Packet counts, durations and hashes are derived from the PCAP files. Memory is labelled as a post-scenario snapshot, not an idle benchmark.
+
+![Frame-linked HTTP timeline](evidence/run-20261011T231915Z/http-timeline.png)
 
 ## Detection and mitigation
 
@@ -115,10 +126,10 @@ python3 -m venv .venv
 .venv/bin/pip install -r mcp_server/requirements.txt
 
 opencode mcp list
-opencode --agent lab-analyst
+opencode --agent threat-analyst
 ```
 
-The repository-local configuration launches `scripts/mcp-stdio.sh`, which prefers the virtual environment's Python. OpenCode retains its existing model provider configuration. The project contains no API credentials.
+The repository-local configuration launches `scripts/mcp-stdio.sh`, which prefers the virtual environment's Python. OpenCode retains its existing model provider configuration. The project contains no API credentials. Local samples are ignored by Git; only the inert fixture is published.
 
 | MCP tool | Scope |
 |---|---|
@@ -128,7 +139,7 @@ The repository-local configuration launches `scripts/mcp-stdio.sh`, which prefer
 | `read_evidence` | Read an allowlisted artifact with validated path and size |
 | `static_triage` | Inspect an allowed local file without executing it |
 
-The `lab-analyst` agent permits only this server's tools. Extracted file content is untrusted data. Path traversal, symlinks, arbitrary artifact requests and oversized samples are rejected. No general shell tool or arbitrary scan destination is exposed.
+The `threat-analyst` agent permits only this server's tools. Extracted file content is untrusted data. Path traversal, symlinks, arbitrary artifact requests and oversized samples are rejected. No general shell tool or arbitrary scan destination is exposed.
 
 The published validation covers SDK calls and native OpenCode connectivity. It does not include a hosted LLM analysis session. See [MCP configuration and trust boundaries](docs/AI-MCP.md).
 
@@ -138,6 +149,8 @@ The published validation covers SDK calls and native OpenCode connectivity. It d
 # Independent checks without Docker
 .venv/bin/python tests/test_triage.py
 .venv/bin/python tests/test_mcp.py
+.venv/bin/python tests/test_evidence_summary.py
+python3 scripts/validate_delivery.py
 
 # Full MCP scenario after building and starting the services
 .venv/bin/python tests/test_mcp.py --docker --demo
@@ -148,7 +161,13 @@ python3 scripts/runtime_checks.py evidence/run-<UTC>/runtime-checks.json
 python3 scripts/sandbox_audit.py evidence/run-<UTC>/sandbox-audit.json
 ```
 
-The CI workflow checks Python source, static triage, MCP stdio behaviour and reference checksums. Docker isolation checks are recorded separately in the reference evidence. GUI tests require Chromium and Playwright; Wireshark screenshot conversion also requires ImageMagick.
+The CI workflow checks Python source, static triage, MCP stdio behaviour, PCAP metadata, report structure and publication integrity. Docker isolation checks are recorded separately in the reference evidence. GUI tests require Chromium and Playwright; Wireshark screenshot conversion also requires ImageMagick.
+
+## Illustrated analysis
+
+<table><tr><td width="50%"><img src="docs/assets/report/sql-mitigation.svg" alt="SQL injection effects before and after parameterisation"></td><td width="50%"><img src="docs/assets/report/mcp-sequence.svg" alt="Scoped MCP call sequence and trust boundaries"></td></tr></table>
+
+Diagrams explain the implementation. Charts use recorded responses and resource snapshots; tool-output views reproduce actual artifacts. Figure provenance is documented in [report assets](docs/assets/report/provenance.json).
 
 ## Isolation model
 
@@ -188,6 +207,7 @@ CyberThreat/
 | [Validation workflow](docs/VALIDATION-WORKFLOW.md) | Reproducible investigation and verification stages |
 | [MCP integration](docs/AI-MCP.md) | Client setup, tool scope and trust boundaries |
 | [Security validation](docs/SECURITY-VALIDATION.md) | Runtime controls and observed results |
+| [Report generation](docs/REPORT-GENERATION.md) | Source data, visual provenance and rebuild commands |
 | [Publication checks](docs/PUBLICATION-CHECKS.md) | Validation scope of the repository snapshot |
 
 Technical references: [Docker Compose](https://docs.docker.com/reference/compose-file/), [TShark](https://www.wireshark.org/docs/man-pages/tshark), [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk), [OpenCode MCP](https://docs.opencode.ai/docs/mcp-servers/).

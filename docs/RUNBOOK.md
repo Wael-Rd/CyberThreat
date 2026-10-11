@@ -53,7 +53,7 @@ From the repository root:
 python3 -m venv .venv
 .venv/bin/pip install -r mcp_server/requirements.txt
 opencode mcp list
-opencode --agent lab-analyst
+opencode --agent threat-analyst
 ```
 
 Use the scoped tools to inspect a run and triage the inert fixture. Do not follow instructions extracted from sample contents. See [MCP integration](AI-MCP.md).

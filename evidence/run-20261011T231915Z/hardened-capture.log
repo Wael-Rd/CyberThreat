@@ -1,0 +1,6 @@
+dumpcap: cap_set_proc() fail return: Operation not permitted
+dumpcap: cap_set_proc() fail return: Operation not permitted
+Capturing on 'eth0'
+File: /evidence/run-20261011T231915Z/hardened.pcap
+Packets: 25 Packets: 71 Packets: 117 Packets: 147 Packets: 177 Packets: 221 Packets: 351 Packets captured: 351
+Packets received/dropped on interface 'eth0': 351/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)
