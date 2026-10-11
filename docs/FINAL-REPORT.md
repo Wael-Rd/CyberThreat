@@ -61,6 +61,6 @@ Les signatures de détection restent actives après mitigation : elles signalent
 
 Le serveur MCP expose cinq outils bornés pour lancer le scénario, vérifier l’état, consulter les preuves et effectuer le triage statique. L’intégration native OpenCode est connectée; aucun appel LLM payant n’a été lancé. Les contenus des échantillons sont des données non fiables.
 
-Voir [validation de sécurité](SECURITY-VALIDATION.md), [six semaines](SIX-WEEKS.md), [intégration OpenCode](AI-MCP.md) et [script vidéo](VIDEO-SCRIPT.md). Les [preuves](../evidence/run-20261011T224758Z/dashboard.html) comprennent deux PCAP, les résultats Nmap/Netcat/tcpdump/TShark, journaux, triage, quatre captures PNG et le manifeste SHA-256.
+Voir [validation de sécurité](SECURITY-VALIDATION.md), [workflow de validation](VALIDATION-WORKFLOW.md), [intégration OpenCode](AI-MCP.md) et [runbook](RUNBOOK.md). Les [preuves](../evidence/run-20261011T224758Z/dashboard.html) comprennent deux PCAP, les résultats Nmap/Netcat/tcpdump/TShark, journaux, triage, quatre captures PNG et le manifeste SHA-256.
 
-Deux conteneurs constituent une adaptation de l’exigence de deux VM, à faire valider par l’enseignant. Aucune garantie absolue d’absence d’évasion et aucune exécution de malware inconnu ne sont revendiquées.
+Les conteneurs partagent le noyau WSL2 et ne fournissent pas une isolation de type VM. Aucune garantie absolue d’absence d’évasion et aucune exécution de malware inconnu ne sont revendiquées.

@@ -9,6 +9,6 @@ Validated locally on 12 October 2026 from the publication checkout.
 - Reference evidence SHA-256 manifest: all files match.
 - README local links: all resolve.
 - Publication scan: no recognised provider-token/private-key markers, local engine storage or workstation home paths included. This is a targeted scan, not an exhaustive secret-detection guarantee.
-- Report: 13 A4 pages, authors WAEL RDIFI and RIM MENZLI, class SSIR-5-F; no long dash character in extracted PDF text; no footer overlap.
+- Report: 13 A4 pages, no long dash character in extracted PDF text; no footer overlap.
 
 The Docker scenarios and host-isolation tests were recorded in the Linux working checkout. They were not rerun from the Windows-mounted publication folder. The CI workflow validates source and SDK behaviour only; its hosted result must be checked after publication. No hosted LLM call was performed.
