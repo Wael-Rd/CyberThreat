@@ -13,7 +13,7 @@ __pycache__/
 *.pem
 *.key
 compose.gui.yaml
-reports/
+/reports/
 *.zip
 *.zip.sha256
 # Preserve one published reference run; ignore newly generated runs.
